@@ -1,1 +1,11 @@
-{}
+{
+  "accentColor": "#0a961b",
+  "theme": "system",
+  "baseFontSize": 19,
+  "enabledCssSnippets": [
+    "tmp"
+  ],
+  "baseFontSizeAction": true,
+  "textFontFamily": "Times New Roman",
+  "cssTheme": ""
+}

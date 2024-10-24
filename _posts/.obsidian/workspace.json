@@ -15,6 +15,7 @@
               "state": {
                 "file": "2024-10-24-test.md",
                 "mode": "source",
+                "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
@@ -143,6 +144,20 @@
               },
               "icon": "lucide-list",
               "title": "Outline of 2024-10-24-test"
+            }
+          },
+          {
+            "id": "556e93833bf733c6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ]

@@ -1,1 +1,14 @@
-{}
+{
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showLineNumber": false,
+  "spellcheckLanguages": null,
+  "vimMode": true,
+  "readableLineLength": true,
+  "attachmentFolderPath": "Attachment"
+}
