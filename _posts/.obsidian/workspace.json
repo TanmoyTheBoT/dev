@@ -11,15 +11,10 @@
             "id": "73ef33c2ad252618",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024-10-24-test.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2024-10-24-test"
+              "title": "New tab"
             }
           }
         ]
@@ -181,5 +176,14 @@
     }
   },
   "active": "73ef33c2ad252618",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Untitled.md",
+    "templates/default.md",
+    "templates/{{date}}-untitled.md",
+    "2024-10-24-test.md",
+    "templates/{{date}}.md",
+    "2024-10-24.md",
+    "templates/TMP.md",
+    "templates"
+  ]
 }
