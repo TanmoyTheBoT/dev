@@ -6,6 +6,6 @@
     "tmp"
   ],
   "baseFontSizeAction": true,
-  "textFontFamily": "Times New Roman",
+  "textFontFamily": "Inter,Times New Roman",
   "cssTheme": ""
 }
