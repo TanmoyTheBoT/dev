@@ -213,24 +213,24 @@ where the $\beta$'s and the $\gamma$'s are 2-cycles, then $r$ and $s$ are both e
 
 #### Proof of Theorem 5.5
   
-   - Suppose $\alpha$ is a permutation that can be written in two ways as products of 2-cycles:
-     $$
-     \alpha = \beta_1 \beta_2 \cdots \beta_r = \gamma_1 \gamma_2 \cdots \gamma_s,
-     $$
-     where the $\beta$'s and $\gamma$'s are 2-cycles, and $r$ and $s$ are the numbers of 2-cycles in each decomposition, respectively.
-   - From the equation above, we can write:
-     $$
-     \epsilon = \gamma_1 \gamma_2 \cdots \gamma_s \beta_r^{-1} \cdots \beta_2^{-1} \beta_1^{-1},
-     $$
-     where $\epsilon$ denotes the identity permutation.
-   - Since a 2-cycle is its own inverse (i.e., $\beta_i = \beta_i^{-1}$ and $\gamma_i = \gamma_i^{-1}$), we can rewrite this expression as:
-     $$
-     \epsilon = \gamma_1 \gamma_2 \cdots \gamma_s \beta_r \cdots \beta_2 \beta_1.
-     $$
-   - This expression shows that we have written the identity permutation $\epsilon$ as a product of $r + s$ 2-cycles.
-   - The lemma preceding Theorem 5.5 guarantees that the identity permutation can only be written as a product of an **even** number of 2-cycles.
-   - Therefore, $r + s$ must be even.
-   - Since $r + s$ is even, it follows that $r$ and $s$ must both be even or both be odd. This implies that the parity of the number of 2-cycles in any decomposition of $\alpha$ is invariant.
+- Suppose $\alpha$ is a permutation that can be written in two ways as products of 2-cycles:
+   $$
+   \alpha = \beta_1 \beta_2 \cdots \beta_r = \gamma_1 \gamma_2 \cdots \gamma_s,
+   $$
+   where the $\beta$'s and $\gamma$'s are 2-cycles, and $r$ and $s$ are the numbers of 2-cycles in each decomposition, respectively.
+- From the equation above, we can write:
+   $$
+   \epsilon = \gamma_1 \gamma_2 \cdots \gamma_s \beta_r^{-1} \cdots \beta_2^{-1} \beta_1^{-1},
+   $$
+   where $\epsilon$ denotes the identity permutation.
+- Since a 2-cycle is its own inverse (i.e., $\beta_i = \beta_i^{-1}$ and $\gamma_i = \gamma_i^{-1}$), we can rewrite this expression as:
+   $$
+   \epsilon = \gamma_1 \gamma_2 \cdots \gamma_s \beta_r \cdots \beta_2 \beta_1.
+   $$
+- This expression shows that we have written the identity permutation $\epsilon$ as a product of $r + s$ 2-cycles.
+- The lemma preceding Theorem 5.5 guarantees that the identity permutation can only be written as a product of an **even** number of 2-cycles.
+- Therefore, $r + s$ must be even.
+- Since $r + s$ is even, it follows that $r$ and $s$ must both be even or both be odd. This implies that the parity of the number of 2-cycles in any decomposition of $\alpha$ is invariant.
 
 ---
 

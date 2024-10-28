@@ -104,7 +104,6 @@ published: true
      - Since $H$ is finite and closed under $G$'s operation, for any $a\in H$, the sequence $a,a^2,a^3,\ldots$ must eventually repeat, so there exist integers $m$ and $n$ with $m>n$ such that $a^m=a^n$, implying $a^{m-n}=e$ and thus $e\in H$.
      - For any $a\in H$, we have $a^{m-n}=e$, which implies $a$ has finite order; letting $k$ be the smallest integer such that $a^k=e$, we find that $a^{k-1}$ is the inverse of $a$ and is in $H$, since $H$ is closed.
 
-
 Let's move on to **Examples Applying Subgroup Tests** to illustrate these theorems in action.
 
 ---

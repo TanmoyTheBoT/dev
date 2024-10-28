@@ -17,7 +17,6 @@ media_subpath:
 render_with_liquid: false
 published: false
 ---
-
 ### Definitions
 
 1. **Group Isomorphism**
@@ -36,26 +35,6 @@ published: false
      \varphi_a(x) = axa^{-1} \quad \text{for all } x \in G
      $$
    is known as the **inner automorphism** of $G$ induced by $a$.
-
-### Definitions
-
-1. **Group Isomorphism**
-   - An isomorphism $\varphi$ from a group $G$ to a group $G'$ is a one-to-one and onto mapping (or function) that preserves the group operation. In formal notation:
-     $$
-     \varphi(ab) = \varphi(a)\varphi(b) \quad \text{for all } a, b \in G.
-     $$
-   - If there exists an isomorphism from $G$ onto $G'$, we say that $G$ and $G'$ are **isomorphic** and write $G \approx G'$.
-
-2. **Automorphism**
-   - An **automorphism** is an isomorphism from a group $G$ onto itself. This concept is crucial as it highlights symmetries within a single group structure.
-
-3. **Inner Automorphism**
-   - Given a group $G$ and an element $a \in G$, the function $\varphi_a$ defined by:
-     $$
-     \varphi_a(x) = axa^{-1} \quad \text{for all } x \in G
-     $$
-   is known as the **inner automorphism** of $G$ induced by $a$.
-
 
 ### Theorem 6.1: Properties of Isomorphisms Acting on Elements
 
