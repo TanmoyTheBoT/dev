@@ -1,5 +1,5 @@
 ---
-title: "[WIP] Contemporary Abstract Algebra: Chapter 4"
+title: "Contemporary Abstract Algebra: Chapter 4"
 description: My notes on chapter 4 of the book Contemporary Abstract Algebra (supported by AI) 
 date: 2024-10-27
 categories:
@@ -394,7 +394,7 @@ Let $G = \langle a \rangle$ be a cyclic group of order $n$.
 2. **Uniqueness of Subgroup of Order $k$**:
    - Suppose there exists another subgroup $H \subseteq G$ with order $k$.
    - By Part 1, $H$ must also be cyclic. Let $H = \langle a^m \rangle$ for some integer $m$.
-   - Since $H$ has order $k$, the order of $a^m$ must be $k$, which implies that $m$ must satisfy $m = n/k$.
+   - Since $\vert H\vert = k$, we have $\vert a^m \vert = k$, notice that $\vert a \vert = n$ is the smallest integer such that $a^n = e$, if $\vert a^m \vert = k$, then $a^{mk} = e$ with $mk$ must be $n$, implying $m = \frac{n}{k}$.
    - Therefore, $H = \langle a^{n/k} \rangle$, showing that $\langle a^{n/k} \rangle$ is the unique subgroup of $G$ with order $k$.
 
 ---
@@ -429,44 +429,19 @@ Let $G = \langle a \rangle$ be a cyclic group of order $n$. If $d$ is a positive
 
 To prove this theorem, we will approach it step-by-step:
 
----
-
-###### Step 1: Structure of Elements in a Cyclic Group
-
 Let $G = \langle a \rangle$ be a cyclic group with $\vert G \vert = n$, where $n$ is finite.
 
 1. Since $G$ is cyclic, each element of $G$ can be written in the form $a^k$ for some integer $k$.
-2. The **order of an element** $a^k$ in $G$ is the smallest positive integer $m$ such that $(a^k)^m = e$, where $e$ is the identity element.
-
-###### Step 2: Order of the Element $a^k$
-
-1. The order of $a^k$, denoted $\vert a^k \vert$, divides $n$, the order of $G$, since $G$ is finite and all powers of $a$ ultimately repeat modulo $n$.
-2. The order of $a^k$ can be determined by finding the smallest positive integer $m$ such that:
-   $$
-   (a^k)^m = a^{km} = e.
-   $$
-3. Since $\vert a \vert = n$, we know that $a^n = e$. Therefore, $a^{km} = e$ if and only if $n$ divides $km$. 
-
-4. Let $d = \gcd(n, k)$. Then $\vert a^k \vert = \frac{n}{d}$, as established in Theorem 4.2.
-
-###### Step 3: Counting Elements of Order $d$
-
-Let $d$ be a positive divisor of $n$. We now want to count how many elements in $G$ have order exactly $d$.
-
-1. For an element $a^k$ to have order $d$, it must satisfy:
+2. For an element $a^k$ to have order $d$, it must satisfy:
    $$
    \vert a^k \vert = d.
    $$
-2. From Theorem 4.2, we know that $\vert a^k \vert = \frac{n}{\gcd(n, k)}$.
+3. From Theorem 4.2, we know that $\vert a^k \vert = \frac{n}{\gcd(n, k)}$.
    - Therefore, $\vert a^k \vert = d$ if and only if $\frac{n}{\gcd(n, k)} = d$, which implies $\gcd(n, k) = \frac{n}{d}$.
 
-3. This condition on $\gcd(n, k)$ means that $k$ must be an integer such that:
-   $$
-   \gcd(n, k) = \frac{n}{d}.
-   $$
-   This ensures that $a^k$ has order exactly $d$.
-
 4. The number of integers $k$ less than $n$ that satisfy $\gcd(n, k) = \frac{n}{d} \Leftrightarrow \gcd\left(\frac{n}{\frac{n}{d}}, \frac{k}{\frac{n}{d}}\right) = 1 \Leftrightarrow \gcd(d, k') = 1$ is given by $\varphi(d)$, the **Euler phi function**, because $\varphi(d)$ counts the number of integers up to $d$ that are coprime with $d$.
+
+Therefore, the number of elements of order $d$ in $G$ is $\varphi(d)$.
 
 ---
 
