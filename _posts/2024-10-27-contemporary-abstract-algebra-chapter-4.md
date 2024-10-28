@@ -1,6 +1,6 @@
 ---
-title: "Contemporary Abstract Algebra: Chapter 4"
-description: This is a AI-generated note from the book Contemporary Abstract Algebra
+title: "[WIP] Contemporary Abstract Algebra: Chapter 4"
+description: My notes on chapter 4 of the book Contemporary Abstract Algebra (supported by AI) 
 date: 2024-10-27
 categories:
   - technical
@@ -17,13 +17,57 @@ media_subpath:
 render_with_liquid: false
 published: true
 ---
+### Summary of Definitions and Terms in Previous Chapters
+
+1. **Cyclic Group**:
+
+   $$
+   G \text{ is a cyclic group if there exists } a \in G \text{ such that } G = \langle a \rangle = \{ a^n \mid n \in \mathbb{Z} \}.
+   $$
+
+2. **Generator**:
+
+   $$
+   \text{If } G = \langle a \rangle, \text{ then } a \text{ is called a generator of } G.
+   $$
+
+3. **Order of an Element**:
+
+   $$
+   \vert a \vert = \min \{ n \in \mathbb{Z}^+ \mid a^n = e \}.
+   $$
+
+   If no such $n$ exists, then $\vert a \vert = \infty$.
+
+4. **Order of a Group**:
+
+   $$
+   \vert G \vert = \text{the number of elements in } G.
+   $$
+
+   If $G$ is infinite, we write $\vert G \vert = \infty$.
+
+5. **Subgroup**:
+
+   $$
+   H \leq G \iff H \subseteq G \text{ and } H \text{ is a group under the operation of } G.
+   $$
+
+6. **Euler's Phi Function** $ \varphi(n) $:
+
+   $$
+   \varphi(n) = \#\{ k \in \mathbb{Z}^+ \mid 1 \leq k \leq n \text{ and } \gcd(n, k) = 1 \}.
+   $$
+
+---
+
 ### Theorem 4.1 and Corollaries
 
 ---
 
 #### Theorem 4.1: Criterion for $a^i = a^j$
 
-**Statement**:
+**Statement**:  
 Let $G$ be a group, and let $a \in G$.
 
 1. If $a$ has infinite order, then $a^i = a^j$ if and only if $i = j$.
@@ -40,9 +84,13 @@ Let $G$ be a group, and let $a \in G$.
 
 ---
 
-#### Corollary 1: $\vert a \vert = |\langle a \rangle|$
+#### Corollaries for Theorem 4.2
 
-**Statement**:
+---
+
+##### Corollary 1: $\vert a \vert = |\langle a \rangle|$
+
+**Statement**:  
 For any group element $a$, the order of $a$ (denoted $\vert a \vert$) equals the order of the cyclic group $\langle a \rangle$.
 
 **Proof**:
@@ -56,9 +104,9 @@ This completes the proof of Corollary 1.
 
 ---
 
-#### Corollary 2: $a^k = e$ if and only if $\vert a \vert$ divides $k$
+##### Corollary 2: $a^k = e$ if and only if $\vert a \vert$ divides $k$
 
-**Statement**:
+**Statement**:  
 For any group element $a$, $a^k = e$ if and only if $\vert a \vert$ divides $k$.
 
 **Proof**:
@@ -75,9 +123,9 @@ This completes the proof of Corollary 2.
 
 ---
 
-#### Corollary 3: $a^k = e$ if and only if $k$ is a multiple of $\vert a \vert$
+##### Corollary 3: $a^k = e$ if and only if $k$ is a multiple of $\vert a \vert$
 
-**Statement**:
+**Statement**:  
 For any group element $a$, $a^k = e$ if and only if $k$ is a multiple of $\vert a \vert$.
 
 **Proof**:
@@ -90,12 +138,13 @@ This completes the proof of Corollary 3.
 
 ---
 
-#### Corollary 4: Relationship between $\vert ab \vert$ and $\vert a \vert \vert b \vert$
+##### Corollary 4: Relationship between $\vert ab \vert$ and $\vert a \vert \vert b \vert$
 
-**Statement**:
+**Statement**:  
 If $a$ and $b$ belong to a finite group and $ab = ba$, then $\vert ab \vert$ divides $\vert a \vert \vert b \vert$.
 
 **Proof**:
+
 Let $\vert a \vert = m$ and $\vert b \vert = n$, so $a^m = e$ and $b^n = e$.
 
 1. Since $a$ and $b$ commute ($ab = ba$), we have:
@@ -111,43 +160,133 @@ Let $\vert a \vert = m$ and $\vert b \vert = n$, so $a^m = e$ and $b^n = e$.
 
 ---
 
-#### Theorem 4.2: $\langle a^k \rangle = \langle a^{\gcd(n, k)} \rangle$ and $\vert a^k \vert = \frac{n}{\gcd(n, k)}$
-
-**Statement**:
-Let $a$ be an element of order $n$ in a group, and let $k$ be a positive integer.
-
-1. $\langle a^k \rangle = \langle a^{\gcd(n, k)} \rangle$.
-2. $\vert a^k \vert = \frac{n}{\gcd(n, k)}$.
-
-**Proof**:
-
-1. Let $d = \gcd(n, k)$ and write $k = dr$. Then $a^k = (a^d)^r$, so $\langle a^k \rangle \subseteq \langle a^d \rangle$.
-   - By the properties of gcd, there exist integers $s$ and $t$ such that $d = ns + kt$. Thus, $a^d \in \langle a^k \rangle$, implying $\langle a^d \rangle \subseteq \langle a^k \rangle$.
-   - Therefore, $\langle a^k \rangle = \langle a^{\gcd(n, k)} \rangle$.
-
-2. To prove $\vert a^k \vert = \frac{n}{d}$:
-   - Observe that $(a^d)^{n/d} = a^n = e$, so $\vert a^d \vert \leq \frac{n}{d}$.
-   - If $i$ is a positive integer less than $\frac{n}{d}$, then $(a^d)^i \neq e$ by the minimality of $\vert a \vert = n$.
-   - Therefore, $\vert a^d \vert = \frac{n}{d}$, and thus $\vert a^k \vert = \frac{n}{\gcd(n, k)}$.
-
-### Corollaries for Theorem 4.2
+#### Theorem 4.2: Powers and Orders in Cyclic Groups
 
 ---
 
-#### Corollary 1: Orders of Elements in Finite Cyclic Groups
+##### Statement
 
-**Statement**:
+Let $a$ be an element of order $n$ in a group, and let $k$ be a positive integer. Then:
+
+1. $\langle a^k \rangle = \langle a^{\gcd(n,k)} \rangle$.
+2. $\vert a^k\vert = \frac{n}{\gcd(n,k)}$.
+
+##### Proof of Theorem 4.2
+
+To prove each part of this theorem, let's proceed step-by-step, using the following definitions and properties:
+
+- **Order of an element $a$:** The smallest positive integer $n$ such that $a^n = e$, where $e$ is the identity element.
+- **Cyclic subgroup generated by $a$:** Denoted $\langle a \rangle = \lbrace a^m \mid m \in \mathbb{Z} \rbrace$.
+- **Greatest Common Divisor (gcd) notation:** Let $d = \gcd(n,k)$.
+
+###### Proof of Part 1: $\langle a^k \rangle = \langle a^{\gcd(n,k)} \rangle$
+
+**Step 1**: Prove $\langle a^k \rangle \subseteq \langle a^d \rangle$.
+
+1. We know $d = \gcd(n,k)$, so there exist integers $s$ and $t$ such that:
+   $$
+   d = ns + kt
+   $$  
+
+2. Since $a^k \in \langle a^k \rangle$, every element of $\langle a^k \rangle$ can be written as $(a^k)^j = a^{kj}$ for some integer $j$.
+
+3. Using the gcd equation $d = ns + kt$, we can rewrite $a^d$ as follows:  
+   $$
+   a^d = a^{ns + kt} = (a^n)^s \cdot (a^k)^t
+   $$
+
+4. Since $a^n = e$ (the identity element), we have $(a^n)^s = e$, which simplifies the above to:  
+   $$
+   a^d = e \cdot (a^k)^t = (a^k)^t
+   $$  
+   Thus, $a^d \in \langle a^k \rangle$, implying that any power of $a^d$ can be expressed as a power of $a^k$, so $\langle a^d \rangle \subseteq \langle a^k \rangle$.
+
+---
+
+**Step 2**: Prove $\langle a^k \rangle \subseteq \langle a^d \rangle$.
+
+1. Since $a^k \in \langle a^k \rangle$, every element in $\langle a^k \rangle$ is of the form $a^{km}$ for some integer $m$.
+
+2. We can express $k = dq$ for some integer $q$ (since $d = \gcd(n,k)$ divides $k$). Thus:
+   $$
+   a^{km} = a^{dqm} = (a^d)^{qm} \in \langle a^d \rangle
+   $$
+
+3. This shows that every element of $\langle a^k \rangle$ can be written as a power of $a^d$, so $\langle a^k \rangle \subseteq \langle a^d \rangle$.
+
+**Conclusion**:
+Since $\langle a^k \rangle \subseteq \langle a^d \rangle$ and $\langle a^d \rangle \subseteq \langle a^k \rangle$, we conclude that:
+$$
+\langle a^k \rangle = \langle a^d \rangle
+$$
+proving Part 1.
+
+---
+
+###### Proof of Part 2: $|a^k| = \frac{n}{\gcd(n,k)}$
+
+**Step 1**: Set up the relationship for the order of $a^k$.
+
+1. Let $d = \gcd(n,k)$.
+2. Since $\langle a^k \rangle = \langle a^d \rangle$ (from Part 1), the orders $\vert a^k\vert$ and $\vert a^d\vert$ must be equal:
+   $$
+   \vert a^k\vert  = \vert a^d\vert
+   $$
+
+3. Therefore, to find $\vert a^k\vert$, it suffices to find $\vert a^d\vert$.
+
+---
+
+**Step 2**: Determine $\vert a^d\vert$ in terms of $n$ and $d$.
+
+1. By definition, the order of $a^d$ is the smallest positive integer $m$ such that:
+   $$
+   (a^d)^m = e
+   $$
+
+2. Since $a$ has order $n$, we know $a^n = e$.
+3. We can rewrite $(a^d)^m = e$ as $a^{dm} = e$. Therefore, $dm$ must be a multiple of $n$, say $dm = nq$ for some integer $q$.
+
+4. Solving for $m$ gives:
+   $$
+   m = \frac{nq}{d}
+   $$
+
+5. To make $m$ the smallest positive integer, set $q = 1$:
+   $$
+   m = \frac{n}{d}
+   $$
+
+Thus, the order of $a^d$, and therefore $\vert a^k\vert$, is:
+$$
+\vert a^k\vert  = \frac{n}{d} = \frac{n}{\gcd(n,k)}
+$$
+
+---
+
+This completes the proof of Theorem 4.2.
+
+---
+
+#### Corollaries for Theorem 4.2
+
+---
+
+##### Corollary 1: Orders of Elements in Finite Cyclic Groups
+
+**Statement**:  
 In a finite cyclic group, the order of any element divides the order of the group.
 
 **Proof**:
+
 Let $G = \langle a \rangle$ be a cyclic group of order $n$. For any element $a^k \in G$, Theorem 4.2 tells us that the order of $a^k$, denoted $\vert a^k \vert$, is $\frac{n}{\gcd(n, k)}$.  
 Since $\gcd(n, k)$ divides $n$, the quantity $\frac{n}{\gcd(n, k)}$ must also divide $n$. Therefore, the order of $a^k$ divides the order of $G$, proving Corollary 1.
 
 ---
 
-#### Corollary 2: Criterion for $\langle a^i \rangle = \langle a^j \rangle$ and $\vert a^i \vert = \vert a^j \vert$
+##### Corollary 2: Criterion for $\langle a^i \rangle = \langle a^j \rangle$ and $\vert a^i \vert = \vert a^j \vert$
 
-**Statement**:
+**Statement**:  
 Let $\vert a \vert = n$. Then:
 
 1. $\langle a^i \rangle = \langle a^j \rangle$ if and only if $\gcd(n, i) = \gcd(n, j)$.
@@ -163,12 +302,13 @@ Let $\vert a \vert = n$. Then:
 
 ---
 
-#### Corollary 3: Generators of Finite Cyclic Groups
+##### Corollary 3: Generators of Finite Cyclic Groups
 
-**Statement**:
+**Statement**:  
 Let $\vert a \vert = n$. Then $\langle a \rangle = \langle a^j \rangle$ if and only if $\gcd(n, j) = 1$.
 
 **Proof**:
+
 The subgroup $\langle a^j \rangle$ equals $\langle a \rangle$ if and only if $a^j$ generates the entire group $G$, which has order $n$.
 
 - By Theorem 4.2, the order of $a^j$ is $\frac{n}{\gcd(n, j)}$.
@@ -177,12 +317,13 @@ This completes the proof of Corollary 3.
 
 ---
 
-#### Corollary 4: Generators of $\mathbb{Z}_n$
+##### Corollary 4: Generators of $\mathbb{Z}_n$
 
-**Statement**:
+**Statement**:  
 An integer $k$ in $\mathbb{Z}_n$ is a generator of $\mathbb{Z}_n$ if and only if $\gcd(n, k) = 1$.
 
 **Proof**:
+
 The group $\mathbb{Z}_n$ under addition modulo $n$ is cyclic with $1$ as a generator. Any integer $k \in \mathbb{Z}_n$ generates $\mathbb{Z}_n$ if and only if it is relatively prime to $n$.
 
 - Specifically, if $\gcd(n, k) = 1$, then $k$ is relatively prime to $n$ and thus generates $\mathbb{Z}_n$.
@@ -197,34 +338,84 @@ This completes the proof of Corollary 4.
 
 #### Theorem 4.3: Fundamental Theorem of Cyclic Groups
 
-**Statement**:
+##### Statement
+
 Every subgroup of a cyclic group is cyclic. Moreover, if $\vert \langle a \rangle \vert = n$, then:
 
 1. The order of any subgroup of $\langle a \rangle$ is a divisor of $n$.
-2. For each positive divisor $k$ of $n$, $\langle a \rangle$ has exactly one subgroup of order $k$, namely $\langle a^{n/k} \rangle$.
+2. For each positive divisor $k$ of $n$, the group $\langle a \rangle$ has exactly one subgroup of order $k$, namely $\langle a^{n/k} \rangle$.
+
+##### Proof of Theorem 4.3
+
+To prove each part of this theorem, we will approach it step-by-step:
 
 ---
 
-**Proof**:
+###### Part 1: Every Subgroup of a Cyclic Group is Cyclic
 
-1. **Cyclic Nature of Subgroups**:
-   - Let $G = \langle a \rangle$ be a cyclic group of order $n$, and let $H$ be a subgroup of $G$.
-   - Since $G$ is cyclic, every element of $H$ can be written as $a^m$ for some integer $m$.
-   - Let $m$ be the smallest positive integer such that $a^m \in H$. Then $H = \langle a^m \rangle$, proving that $H$ is cyclic.
+Let $G = \langle a \rangle$ be a cyclic group generated by $a$ with order $n$. Let $H$ be a subgroup of $G$.
 
-2. **Order of Subgroups**:
-   - If $H = \langle a^m \rangle$, then the order of $H$ is $\frac{n}{\gcd(n, m)}$ (from Theorem 4.2).
-   - Let $k$ be a positive divisor of $n$. Then $\langle a^{n/k} \rangle$ is a subgroup of $G$ with order $k$.
-   - By the uniqueness of the cyclic subgroup generated by a given element in $G$, $\langle a^{n/k} \rangle$ is the unique subgroup of order $k$ in $G$.
+1. **Every Element in $H$ Can Be Written as a Power of $a$**:
+   - Since $G = \langle a \rangle$, every element in $G$ (and thus every element in $H$) can be expressed in the form $a^m$ for some integer $m$.
+   - Therefore, $H \subseteq G$ contains only powers of $a$.
+
+2. **Existence of the Smallest Positive Power**:
+   - If $H = \{e\}$, then $H$ is cyclic, generated by $e = a^0$.
+   - Otherwise, there exists at least one positive integer $m$ such that $a^m \in H$ and $a^m \neq e$.
+   - Let $t$ be the smallest positive integer such that $a^t \in H$.
+
+3. **Subgroup Generated by $a^t$**:
+   - Consider the cyclic subgroup $\langle a^t \rangle$ generated by $a^t$.
+   - This subgroup consists of the elements $\{e, a^t, a^{2t}, \dots\}$, which are all in $H$ because $H$ is closed under the group operation.
+
+4. **Equality of $H$ and $\langle a^t \rangle$**:
+   - Now, take any $h \in H$. Since $h \in G = \langle a \rangle$, we can write $h = a^m$ for some integer $m$.
+   - By the Division Algorithm, we can express $m = qt + r$, where $0 \leq r < t$.
+   - Then:
+     $$
+     h = a^m = a^{qt + r} = (a^t)^q a^r
+     $$
+   - Since $a^t \in H$, $(a^t)^q \in H$. Also, $h = (a^t)^q a^r \in H$ implies $a^r \in H$.
+   - By the minimality of $t$, $r$ must be zero; otherwise, $a^r$ would be a smaller positive power of $a$ in $H$, contradicting our choice of $t$.
+   - Therefore, $m = qt$, so $h = (a^t)^q \in \langle a^t \rangle$.
+
+5. **Conclusion**:
+   - This shows that $H \subseteq \langle a^t \rangle$ and $\langle a^t \rangle \subseteq H$, hence $H = \langle a^t \rangle$.
+   - Therefore, $H$ is cyclic, generated by $a^t$.
+
+---
+
+###### Part 2: Order of Subgroups Divides $n$
+
+1. Since $H = \langle a^t \rangle$ and $a^t$ has the smallest positive power in $H$, the order of $H$ is the order of $a^t$.
+2. The order of $a^t$ is given by $\frac{n}{\gcd(n,t)}$, which divides $n$ because $\gcd(n,t)$ is a divisor of $n$.
+
+---
+
+###### Part 3: For Each Positive Divisor $k$ of $n$, There Exists Exactly One Subgroup of Order $k$
+
+Let $G = \langle a \rangle$ be a cyclic group of order $n$.
+
+1. **Subgroup Generated by $a^{n/k}$**:
+   - For each positive divisor $k$ of $n$, consider the element $a^{n/k}$.
+   - The order of $a^{n/k}$ is $\frac{n}{\gcd(n,n/k)} = k$.
+   - Therefore, the subgroup $\langle a^{n/k} \rangle$ has order $k$.
+
+2. **Uniqueness of Subgroup of Order $k$**:
+   - Suppose there exists another subgroup $H \subseteq G$ with order $k$.
+   - By Part 1, $H$ must also be cyclic. Let $H = \langle a^m \rangle$ for some integer $m$.
+   - Since $H$ has order $k$, the order of $a^m$ must be $k$, which implies that $m$ must satisfy $m = n/k$.
+   - Therefore, $H = \langle a^{n/k} \rangle$, showing that $\langle a^{n/k} \rangle$ is the unique subgroup of $G$ with order $k$.
 
 ---
 
 #### Corollary: Subgroups of $\mathbb{Z}_n$
 
-**Statement**:
+**Statement**:  
 For each positive divisor $k$ of $n$, the set $\langle n/k \rangle$ is the unique subgroup of $\mathbb{Z}_n$ of order $k$; moreover, these are the only subgroups of $\mathbb{Z}_n$.
 
 **Proof**:
+
 The group $\mathbb{Z}_n$ is cyclic with order $n$, generated by $1$.
 
 - By Theorem 4.3, every subgroup of a cyclic group is cyclic, and the order of each subgroup divides $n$.
@@ -238,12 +429,13 @@ Thus, the only subgroups of $\mathbb{Z}_n$ are the cyclic subgroups generated by
 
 #### Theorem 4.4: Number of Elements of Each Order in a Cyclic Group
 
-**Statement**:
+**Statement**:  
 If $d$ is a positive divisor of $n$, the number of elements of order $d$ in a cyclic group of order $n$ is $\varphi(d)$, where $\varphi$ is the Euler phi function.
 
 ---
 
 **Proof**:
+
 Let $G = \langle a \rangle$ be a cyclic group of order $n$, generated by $a$.
 
 1. **Existence of Subgroups of Each Order**:
@@ -264,10 +456,11 @@ Therefore, there are $\varphi(d)$ elements in $G$ of order $d$, proving Theorem 
 
 #### Corollary 4.1: Number of Elements of Order $d$ in a Finite Group
 
-**Statement**:
+**Statement**:  
 In a finite group, the number of elements of order $d$ is a multiple of $\varphi(d)$.
 
 **Proof**:
+
 Let $G$ be a finite group. If $G$ has no elements of order $d$, the statement is trivially true since $\varphi(d)$ divides zero.
 
 Suppose $G$ has elements of order $d$:

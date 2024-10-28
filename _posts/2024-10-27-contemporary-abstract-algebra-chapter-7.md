@@ -1,6 +1,6 @@
 ---
-title: "Contemporary Abstract Algebra: Chapter 7"
-description: This is a AI-generated note from the book Contemporary Abstract Algebra
+title: "[WIP] Contemporary Abstract Algebra: Chapter 7"
+description: My notes on chapter 7 of the book Contemporary Abstract Algebra (supported by AI)  
 date: 2024-10-27
 categories:
   - technical
@@ -23,8 +23,8 @@ This section begins by defining cosets and listing the fundamental properties of
 
 #### Coset Definitions
 Let $G$ be a group, and $H$ a nonempty subset of $G$. For any element $a \in G$:
-- The **left coset** of $H$ in $G$ containing $a$ is $aH = \{ah \mid h \in H\}$.
-- The **right coset** is $Ha = \{ha \mid h \in H\}$.
+- The **left coset** of $H$ in $G$ containing $a$ is $aH = \lbrace ah \mid h \in H\rbrace$.
+- The **right coset** is $Ha = \lbrace ha \mid h \in H\rbrace$.
 - When $H$ is a subgroup, $aH$ or $Ha$ represents a coset of $H$ in $G$, with $a$ as the **coset representative**.
   
 Let's go through the proof for each of the nine properties of cosets in Lemma 7.1. Let $H$ be a subgroup of $G$, and let $a, b \in G$.
@@ -126,33 +126,33 @@ Since $f$ is a bijection between $aH$ and $bH$, $|aH| = |bH|$.
 
 ---
 
-This concludes the rigorous proof of each property in Lemma 7.1. Let me know if you’d like to proceed with additional examples or further sections.
+This concludes the rigorous proof of each property in Lemma 7.1. Let me know if you'd like to proceed with additional examples or further sections.
 ### Examples of Coset Properties
 
 These examples illustrate the coset properties outlined in Lemma 7.1, emphasizing the ways cosets organize elements within groups.
 
 #### Example 1
-Let $G = S_3$ (the symmetric group of degree 3), and $H = \{(1), (13)\}$. The left cosets of $H$ in $G$ are:
+Let $G = S_3$ (the symmetric group of degree 3), and $H = \lbrace (1), (13)\rbrace$. The left cosets of $H$ in $G$ are:
 
-1. $(1)H = H = \{(1), (13)\}$.
-2. $(12)H = \{(12), (12)(13)\} = \{(12), (132)\} = (132)H$.
-3. $(13)H = \{(13), (1)\} = H$.
-4. $(23)H = \{(23), (23)(13)\} = \{(23), (123)\} = (123)H$.
+1. $(1)H = H = \lbrace (1), (13)\rbrace$.
+2. $(12)H = \lbrace (12), (12)(13)\rbrace = \lbrace (12), (132)\rbrace = (132)H$.
+3. $(13)H = \lbrace (13), (1)\rbrace = H$.
+4. $(23)H = \lbrace (23), (23)(13)\rbrace = \lbrace (23), (123)\rbrace = (123)H$.
 
 #### Example 2
-Let $K = \{R_0, R_{180}\}$ in $D_4$ (the dihedral group of order 8). Then the left cosets of $K$ in $D_4$ are:
+Let $K = \lbrace R_0, R_{180}\rbrace$ in $D_4$ (the dihedral group of order 8). Then the left cosets of $K$ in $D_4$ are:
 
-1. $R_0K = K = \{R_0, R_{180}\}$.
-2. $R_{90}K = \{R_{90}, R_{270}\} = R_{270}K$.
-3. $V K = \{V, H\} = H K$.
-4. $D K = \{D, D'\} = D'K$.
+1. $R_0K = K = \lbrace R_0, R_{180}\rbrace$.
+2. $R_{90}K = \lbrace R_{90}, R_{270}\rbrace = R_{270}K$.
+3. $V K = \lbrace V, H\rbrace = H K$.
+4. $D K = \lbrace D, D'\rbrace = D'K$.
 
 #### Example 3
-Consider $H = \{0, 3, 6\}$ in $\mathbb{Z}_9$ (the integers modulo 9, under addition). Here, we denote cosets by $a + H$ due to the additive operation:
+Consider $H = \lbrace 0, 3, 6\rbrace$ in $\mathbb{Z}_9$ (the integers modulo 9, under addition). Here, we denote cosets by $a + H$ due to the additive operation:
 
-1. $0 + H = \{0, 3, 6\} = 3 + H = 6 + H$.
-2. $1 + H = \{1, 4, 7\} = 4 + H = 7 + H$.
-3. $2 + H = \{2, 5, 8\} = 5 + H = 8 + H$.
+1. $0 + H = \lbrace 0, 3, 6\rbrace = 3 + H = 6 + H$.
+2. $1 + H = \lbrace 1, 4, 7\rbrace = 4 + H = 7 + H$.
+3. $2 + H = \lbrace 2, 5, 8\rbrace = 5 + H = 8 + H$.
 
 ---
 
@@ -161,11 +161,11 @@ Consider $H = \{0, 3, 6\}$ in $\mathbb{Z}_9$ (the integers modulo 9, under addit
 1. **Cosets Are Not Necessarily Subgroups**: Generally, cosets such as $(12)H$ in Example 1 are not subgroups.
 2. **Equivalence of Different Cosets**: It is possible for distinct elements to generate the same coset, as seen with $0 + H$ and $3 + H$ in Example 3.
 3. **Non-Equality of Left and Right Cosets**: In Example 1, we observe that $(12)H \neq H(12)$, illustrating that left cosets and right cosets may differ.
-### Section: Lagrange’s Theorem and Consequences
+### Section: Lagrange's Theorem and Consequences
 
-Lagrange’s Theorem is one of the foundational results in group theory, particularly for finite groups. It establishes a direct relationship between the order of a group and the order of its subgroups.
+Lagrange's Theorem is one of the foundational results in group theory, particularly for finite groups. It establishes a direct relationship between the order of a group and the order of its subgroups.
 
-#### Theorem 7.1: Lagrange’s Theorem
+#### Theorem 7.1: Lagrange's Theorem
 If $G$ is a finite group and $H$ is a subgroup of $G$, then $|H|$ divides $|G|$. Additionally, the number of distinct left (or right) cosets of $H$ in $G$ is $|G| / |H|$.
 
 **Proof**:
@@ -183,9 +183,9 @@ If $G$ is a finite group and $H$ is a subgroup of $G$, then $|H|$ divides $|G|$.
    $$
 4. Since $r$ is the number of distinct left cosets of $H$ in $G$, we have $|G| = |H| \cdot r$, which implies $|H|$ divides $|G|$.
 
-### Corollaries of Lagrange’s Theorem
+### Corollaries of Lagrange's Theorem
 
-Lagrange’s Theorem provides a framework for several important corollaries in group theory. Let's go through the proof of each corollary derived from Lagrange’s Theorem.
+Lagrange's Theorem provides a framework for several important corollaries in group theory. Let's go through the proof of each corollary derived from Lagrange's Theorem.
 
 ---
 
@@ -197,7 +197,7 @@ $$
 $$
 
 **Proof**:
-By Lagrange’s Theorem, we know that the group $G$ can be partitioned into distinct cosets of $H$, each coset having exactly $|H|$ elements. If there are $r$ distinct left cosets, then:
+By Lagrange's Theorem, we know that the group $G$ can be partitioned into distinct cosets of $H$, each coset having exactly $|H|$ elements. If there are $r$ distinct left cosets, then:
 $$
 |G| = r \cdot |H|
 $$
@@ -214,7 +214,7 @@ Thus, the number of distinct left cosets of $H$ in $G$, which is the index of $H
 **Statement**: In a finite group $G$, the order of each element divides the order of the group.
 
 **Proof**:
-Let $a \in G$ be an element with order $k$. Then the cyclic subgroup generated by $a$, denoted $\langle a \rangle$, has $k$ elements. Since $\langle a \rangle$ is a subgroup of $G$, by Lagrange’s Theorem, $|\langle a \rangle|$ divides $|G|$. Therefore, $k$ divides $|G|$, showing that the order of $a$ divides the order of $G$.
+Let $a \in G$ be an element with order $k$. Then the cyclic subgroup generated by $a$, denoted $\langle a \rangle$, has $k$ elements. Since $\langle a \rangle$ is a subgroup of $G$, by Lagrange's Theorem, $|\langle a \rangle|$ divides $|G|$. Therefore, $k$ divides $|G|$, showing that the order of $a$ divides the order of $G$.
 
 ---
 
@@ -240,7 +240,7 @@ Thus, $a^{|G|} = e$ for any $a \in G$, completing the proof.
 
 ---
 
-### Corollary 5: Fermat’s Little Theorem
+### Corollary 5: Fermat's Little Theorem
 
 **Statement**: For any integer $a$ and any prime $p$, we have:
 $$
@@ -257,11 +257,11 @@ $$
 a^p = a \cdot a^{p-1} \equiv a \cdot 1 = a \pmod{p}
 $$
 
-This completes the proof of Fermat’s Little Theorem.
+This completes the proof of Fermat's Little Theorem.
 
 ### Theorem 7.2: Product of Subgroups
 
-**Statement**: Let $H$ and $K$ be finite subgroups of a group $G$. Define the set $HK = \{hk \mid h \in H, k \in K\}$, which contains all products of elements in $H$ and $K$. Then:
+**Statement**: Let $H$ and $K$ be finite subgroups of a group $G$. Define the set $HK = \lbrace hk \mid h \in H, k \in K\rbrace$, which contains all products of elements in $H$ and $K$. Then:
 $$
 |HK| = \frac{|H||K|}{|H \cap K|}
 $$
@@ -299,7 +299,7 @@ Theorem 7.2 provides insight into the structure of the product set $HK$. Notably
 - $HK$ is not necessarily a subgroup of $G$; it is only guaranteed to be a set containing all possible products of elements from $H$ and $K$.
 - The formula $|HK| = \frac{|H||K|}{|H \cap K|}$ highlights that $|HK|$ is influenced by the overlap (intersection) of $H$ and $K$. The larger the intersection $H \cap K$, the smaller $|HK|$ will be relative to $|H| \cdot |K|$.
 
-### Examples of Theorem 7.2’s Applications
+### Examples of Theorem 7.2's Applications
 
 These examples illustrate how Theorem 7.2 helps determine subgroup constraints in groups.
 
@@ -323,13 +323,13 @@ Let $G$ be a group of permutations acting on a set $S$.
 
 1. **Stabilizer of a Point**: For each $i \in S$, the stabilizer of $i$ in $G$, denoted $\text{stab}_G(i)$, is the set of all elements in $G$ that leave $i$ fixed. Formally:
    $$
-   \text{stab}_G(i) = \{ \phi \in G \mid \phi(i) = i \}
+   \text{stab}_G(i) = \lbrace  \phi \in G \mid \phi(i) = i \rbrace
    $$
    The stabilizer is a subgroup of $G$.
 
 2. **Orbit of a Point**: For each $i \in S$, the orbit of $i$ under $G$, denoted $\text{orb}_G(i)$, is the set of elements in $S$ that can be reached by applying elements of $G$ to $i$:
    $$
-   \text{orb}_G(i) = \{ \phi(i) \mid \phi \in G \}
+   \text{orb}_G(i) = \lbrace  \phi(i) \mid \phi \in G \rbrace
    $$
 
 ---
@@ -338,26 +338,26 @@ Let $G$ be a group of permutations acting on a set $S$.
 
 Consider the subgroup $G \subset S_8$ given by:
 $$
-G = \{(1), (132)(465)(78), (132)(465), (123)(456), (123)(456)(78), (78)\}
+G = \lbrace (1), (132)(465)(78), (132)(465), (123)(456), (123)(456)(78), (78)\rbrace
 $$
 
 For this $G$, we calculate the stabilizers and orbits for specific elements:
 
 1. **Orbit and Stabilizer of $1$**:
-   - $\text{orb}_G(1) = \{1, 3, 2\}$
-   - $\text{stab}_G(1) = \{(1), (78)\}$
+   - $\text{orb}_G(1) = \lbrace 1, 3, 2\rbrace$
+   - $\text{stab}_G(1) = \lbrace (1), (78)\rbrace$
 
 2. **Orbit and Stabilizer of $2$**:
-   - $\text{orb}_G(2) = \{2, 1, 3\}$
-   - $\text{stab}_G(2) = \{(1), (78)\}$
+   - $\text{orb}_G(2) = \lbrace 2, 1, 3\rbrace$
+   - $\text{stab}_G(2) = \lbrace (1), (78)\rbrace$
 
 3. **Orbit and Stabilizer of $4$**:
-   - $\text{orb}_G(4) = \{4, 6, 5\}$
-   - $\text{stab}_G(4) = \{(1), (78)\}$
+   - $\text{orb}_G(4) = \lbrace 4, 6, 5\rbrace$
+   - $\text{stab}_G(4) = \lbrace (1), (78)\rbrace$
 
 4. **Orbit and Stabilizer of $7$**:
-   - $\text{orb}_G(7) = \{7, 8\}$
-   - $\text{stab}_G(7) = \{(1), (132)(465), (123)(456)\}$
+   - $\text{orb}_G(7) = \lbrace 7, 8\rbrace$
+   - $\text{stab}_G(7) = \lbrace (1), (132)(465), (123)(456)\rbrace$
 
 ---
 
@@ -371,7 +371,7 @@ $$
 $$
 
 **Proof**:
-1. By Lagrange’s Theorem, the number of distinct left cosets of $\text{stab}_G(i)$ in $G$ is $|G| / |\text{stab}_G(i)|$.
+1. By Lagrange's Theorem, the number of distinct left cosets of $\text{stab}_G(i)$ in $G$ is $|G| / |\text{stab}_G(i)|$.
 2. Define a mapping $T$ from the cosets of $\text{stab}_G(i)$ to $\text{orb}_G(i)$ by $T(\phi \cdot \text{stab}_G(i)) = \phi(i)$.
 3. This map is well-defined and one-to-one, establishing a bijective correspondence between the cosets of $\text{stab}_G(i)$ and the elements of $\text{orb}_G(i)$.
 4. Thus, $|G| = |\text{orb}_G(i)| \cdot |\text{stab}_G(i)|$, proving the theorem.
@@ -428,4 +428,3 @@ A traditional soccer ball, mathematically known as a **truncated icosahedron**, 
    $$
 
 Hence, the rotation group of a soccer ball has 60 elements. This rotation group is isomorphic to $A_5$, the alternating group on five elements, which is the group of even permutations of five elements. This fact aligns with the high level of symmetry exhibited by the soccer ball.
-

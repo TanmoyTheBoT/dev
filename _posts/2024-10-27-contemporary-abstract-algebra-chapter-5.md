@@ -1,6 +1,6 @@
 ---
-title: "Contemporary Abstract Algebra: Chapter 5"
-description: This is a AI-generated note from the book Contemporary Abstract Algebra
+title: "[WIP] Contemporary Abstract Algebra: Chapter 5"
+description: My notes on chapter 5 of the book Contemporary Abstract Algebra (supported by AI)  
 date: 2024-10-27
 categories:
   - technical
@@ -17,7 +17,7 @@ media_subpath:
 render_with_liquid: false
 published: true
 ---
-Starting with **Definitions and Basic Notations** and the **Examples of Permutation Groups**, here’s the detailed walkthrough:
+Starting with **Definitions and Basic Notations** and the **Examples of Permutation Groups**, here's the detailed walkthrough:
 
 ## Definitions and Basic Notations
 
@@ -28,12 +28,12 @@ Starting with **Definitions and Basic Notations** and the **Examples of Permutat
    The permutation group of $A$, denoted $S_A$, consists of all permutations of $A$ under the operation of function composition. This group operation satisfies closure, associativity, the presence of an identity element, and the existence of inverses, making it a valid group.
 
 3. **Symmetric Group $S_n$**:
-   When $A$ is a finite set $\{1, 2, \dots, n\}$, the permutation group on $A$ is called the **symmetric group** of degree $n$, denoted by $S_n$. It contains all possible permutations of $n$ elements, giving it an order of $n!$ (factorial of $n$).
+   When $A$ is a finite set $\lbrace 1, 2, \dots, n\rbrace$, the permutation group on $A$ is called the **symmetric group** of degree $n$, denoted by $S_n$. It contains all possible permutations of $n$ elements, giving it an order of $n!$ (factorial of $n$).
 
 ## Examples of Permutation Groups
 
 1. **Example 1: Symmetric Group $S_3$**
-   - Consider the set $\{1, 2, 3\}$.
+   - Consider the set $\lbrace 1, 2, 3\rbrace$.
    - The permutations of this set that form the group $S_3$ are as follows:
      $$
      \epsilon = \begin{bmatrix} 1 & 2 & 3 \\ 1 & 2 & 3 \end{bmatrix}, \quad
@@ -48,7 +48,7 @@ Starting with **Definitions and Basic Notations** and the **Examples of Permutat
    - This group is **non-Abelian** since not all elements commute. For instance, $\beta \alpha \neq \alpha \beta$.
 
 2. **Example 2: Symmetric Group $S_n$**
-   - For any set $A = \{1, 2, \dots, n\}$, the group $S_n$ consists of all permutations of $A$.
+   - For any set $A = \lbrace 1, 2, \dots, n\rbrace$, the group $S_n$ consists of all permutations of $A$.
    - The number of elements (order) of $S_n$ is $n!$ because each element can be mapped in $n$ different ways, then $n-1$, and so forth.
    - **Note**: $S_n$ is non-Abelian for $n \geq 3$.
 
@@ -62,7 +62,7 @@ Starting with **Definitions and Basic Notations** and the **Examples of Permutat
 
 1. **Definition and Use of Cycle Notation**:
    - **Cycle Notation** simplifies the representation of permutations by showing how elements move in cycles rather than in array form.
-   - In cycle notation, a permutation $\alpha$ of the set $\{1, 2, 3, 4, 5, 6\}$ that maps:
+   - In cycle notation, a permutation $\alpha$ of the set $\lbrace 1, 2, 3, 4, 5, 6\rbrace$ that maps:
      $$
      \alpha = \begin{bmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 2 & 1 & 4 & 6 & 5 & 3 \end{bmatrix}
      $$
@@ -84,7 +84,7 @@ Starting with **Definitions and Basic Notations** and the **Examples of Permutat
 
 #### Proof of Theorem 5.1
 
-Let $\alpha$ be a permutation on a finite set $A = \{1, 2, \dots, n\}$.
+Let $\alpha$ be a permutation on a finite set $A = \lbrace 1, 2, \dots, n\rbrace$.
 
 1. **Constructing Cycles**:
    - Begin by picking any element $a_1 \in A$.
@@ -99,7 +99,7 @@ Let $\alpha$ be a permutation on a finite set $A = \{1, 2, \dots, n\}$.
 
 2. **Exhausting All Elements in $A$**:
    - If all elements of $A$ have been included in this cycle, we are done.
-   - If there are elements not in this cycle, choose an element $b_1$ not in $\{a_1, a_2, \dots, a_m\}$, and repeat the cycle construction:
+   - If there are elements not in this cycle, choose an element $b_1$ not in $\lbrace a_1, a_2, \dots, a_m\rbrace$, and repeat the cycle construction:
      $$
      b_2 = \alpha(b_1),\ b_3 = \alpha(b_2), \dots, b_k = b_1
      $$
@@ -119,9 +119,9 @@ Thus, every permutation can be written as a cycle or a product of disjoint cycle
 
 #### Proof of Theorem 5.2
 
-Let $S = \{a_1, a_2, \dots, a_m, b_1, b_2, \dots, b_n, c_1, c_2, \dots, c_k\}$ where the $c_i$'s are elements in $S$ that are fixed by both $\alpha$ and $\beta$.
+Let $S = \lbrace a_1, a_2, \dots, a_m, b_1, b_2, \dots, b_n, c_1, c_2, \dots, c_k\rbrace$ where the $c_i$'s are elements in $S$ that are fixed by both $\alpha$ and $\beta$.
 
-1. **Case 1**: For any $x \in \{a_1, a_2, \dots, a_m\}$:
+1. **Case 1**: For any $x \in \lbrace a_1, a_2, \dots, a_m\rbrace$:
    - $\beta$ does not move $x$, so $\beta(x) = x$.
    - Applying $\alpha \beta$ to $x$ gives:
      $$
@@ -130,7 +130,7 @@ Let $S = \{a_1, a_2, \dots, a_m, b_1, b_2, \dots, b_n, c_1, c_2, \dots, c_k\}$ w
    - Similarly, $(\beta \alpha)(x) = \beta(\alpha(x)) = \alpha(x)$.
    - Thus, $(\alpha \beta)(x) = (\beta \alpha)(x)$.
 
-2. **Case 2**: For any $y \in \{b_1, b_2, \dots, b_n\}$:
+2. **Case 2**: For any $y \in \lbrace b_1, b_2, \dots, b_n\rbrace$:
    - $\alpha$ does not move $y$, so $\alpha(y) = y$.
    - Applying $\alpha \beta$ to $y$ gives:
      $$
@@ -139,7 +139,7 @@ Let $S = \{a_1, a_2, \dots, a_m, b_1, b_2, \dots, b_n, c_1, c_2, \dots, c_k\}$ w
    - Similarly, $(\beta \alpha)(y) = \beta(\alpha(y)) = \beta(y)$.
    - Thus, $(\alpha \beta)(y) = (\beta \alpha)(y)$.
 
-3. **Case 3**: For any $z \in \{c_1, c_2, \dots, c_k\}$:
+3. **Case 3**: For any $z \in \lbrace c_1, c_2, \dots, c_k\rbrace$:
    - Both $\alpha$ and $\beta$ leave $z$ fixed, so $(\alpha \beta)(z) = z$ and $(\beta \alpha)(z) = z$.
 
 Since $\alpha \beta$ and $\beta \alpha$ act identically on all elements of $S$, $\alpha \beta = \beta \alpha$, proving that disjoint cycles commute.
@@ -268,7 +268,7 @@ Since all group properties are satisfied, the set of even permutations $A_n$ for
 
 Thus, the order of $A_n$ is $n! / 2$, completing the proof.
 
-Next, let’s move on to **Examples** that illustrate the application of these theorems, starting with order calculations, cycle decompositions, and group properties in $S_n$ and $A_n$.
+Next, let's move on to **Examples** that illustrate the application of these theorems, starting with order calculations, cycle decompositions, and group properties in $S_n$ and $A_n$.
 
 ---
 
@@ -294,7 +294,7 @@ Using **Theorem 5.3** on the order of a permutation:
 Using **Theorem 5.6** on even permutations forming a subgroup:
 
 1. **Symmetric Group $S_4$**:
-   - $S_4$ includes all permutations of $\{1, 2, 3, 4\}$, with order $4! = 24$.
+   - $S_4$ includes all permutations of $\lbrace 1, 2, 3, 4\rbrace$, with order $4! = 24$.
 
 2. **Alternating Group $A_4$**:
    - $A_4$ consists of all even permutations in $S_4$, with order $24 / 2 = 12$.
@@ -316,7 +316,7 @@ Using **Theorem 5.5** on the parity of permutations:
      $$
 
 2. **Parity Classification**:
-   - $\epsilon$ is even, as it’s the identity.
+   - $\epsilon$ is even, as it's the identity.
    - The transpositions $(12), (13), (23)$ are odd, each consisting of a single 2-cycle.
    - The 3-cycles $(123)$ and $(132)$ are even, as each can be expressed as the product of two transpositions:
      $$

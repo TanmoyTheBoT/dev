@@ -1,6 +1,6 @@
 ---
 title: "Contemporary Abstract Algebra: Chapter 1"
-description: This is a AI-generated note from the book Contemporary Abstract Algebra
+description: My notes on chapter 1 of the book Contemporary Abstract Algebra (supported by AI)
 date: 2024-10-27
 categories:
   - technical
@@ -43,7 +43,7 @@ These eight elements are all possible motions that leave the square within the s
 
 #### Cayley Table of $D_4$
 
-The **Cayley table** provides a systematic way to compose these operations, revealing important group properties. Here’s the Cayley table for $D_4$:
+The **Cayley table** provides a systematic way to compose these operations, revealing important group properties. Here's the Cayley table for $D_4$:
 
 $$
 \begin{array}{c|cccccccc}
@@ -83,7 +83,7 @@ $$
 
 #### Associativity in $D_4$
 
-Since the operations in $D_4$ are based on **function composition**—and function composition is inherently associative—we don’t need to verify each combination. However, understanding that associativity is maintained through function composition is fundamental because all group operations rely on this property. Associativity in $D_4$ ensures that sequences of motions can be composed without concern for grouping, making calculations within the group straightforward.
+Since the operations in $D_4$ are based on **function composition**—and function composition is inherently associative—we don't need to verify each combination. However, understanding that associativity is maintained through function composition is fundamental because all group operations rely on this property. Associativity in $D_4$ ensures that sequences of motions can be composed without concern for grouping, making calculations within the group straightforward.
 
 ### 4. Generalizing to Dihedral Groups $D_n$
 
@@ -96,7 +96,7 @@ The **Dihedral Group $D_n$** represents the group of symmetries for a regular $n
 
 For any $n$-gon, the elements of $D_n$ are structured as follows:
 
-1. **Rotations** $R_k$ where $k \in \{0, 1, \ldots, n-1\}$ and each $R_k$ represents a rotation by $k \times (360^\circ / n)$.
+1. **Rotations** $R_k$ where $k \in \lbrace 0, 1, \ldots, n-1\rbrace$ and each $R_k$ represents a rotation by $k \times (360^\circ / n)$.
 2. **Reflections** $F_i$, where each reflection corresponds to flipping across a unique line of symmetry of the $n$-gon. There are $n$ such axes for a regular $n$-gon.
 
 The group $D_n$ is defined by:
@@ -110,6 +110,6 @@ The group $D_n$ is defined by:
 
 Dihedral groups are not only mathematical constructs but appear in various fields, including:
 
-- **Art and Design**: Symmetries in floor patterns, pottery, corporate logos (e.g., Chrysler’s $D_5$ logo, Mercedes-Benz’s $D_3$ logo).
+- **Art and Design**: Symmetries in floor patterns, pottery, corporate logos (e.g., Chrysler's $D_5$ logo, Mercedes-Benz's $D_3$ logo).
 - **Crystallography**: Symmetry patterns in crystals, particularly with groups like $D_4$ and $D_6$, revealing structural properties.
 - **Chemistry**: The molecular symmetry of compounds, such as the $D_3$ symmetry of ammonia.

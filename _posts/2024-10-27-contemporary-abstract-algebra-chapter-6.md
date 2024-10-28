@@ -1,6 +1,6 @@
 ---
-title: "Contemporary Abstract Algebra: Chapter 6"
-description: This is a AI-generated note from the book Contemporary Abstract Algebra
+title: "[WIP] Contemporary Abstract Algebra: Chapter 6"
+description: My notes on chapter 6 of the book Contemporary Abstract Algebra (supported by AI) 
 date: 2024-10-27
 categories:
   - technical
@@ -134,8 +134,8 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 1. **Inverse Isomorphism**: The inverse function $\varphi^{-1}$ is an isomorphism from $G'$ onto $G$.
 2. **Abelianness Preservation**: $G$ is Abelian if and only if $G'$ is Abelian.
 3. **Cyclic Structure Preservation**: $G$ is cyclic if and only if $G'$ is cyclic.
-4. **Subgroup Preservation**: If $K$ is a subgroup of $G$, then $\varphi(K) = \{ \varphi(k) \mid k \in K \}$ is a subgroup of $G'$.
-5. **Subgroup Preservation under Inverse**: If $K'$ is a subgroup of $G'$, then $\varphi^{-1}(K') = \{ g \in G \mid \varphi(g) \in K' \}$ is a subgroup of $G$.
+4. **Subgroup Preservation**: If $K$ is a subgroup of $G$, then $\varphi(K) = \lbrace  \varphi(k) \mid k \in K \rbrace$ is a subgroup of $G'$.
+5. **Subgroup Preservation under Inverse**: If $K'$ is a subgroup of $G'$, then $\varphi^{-1}(K') = \lbrace  g \in G \mid \varphi(g) \in K' \rbrace$ is a subgroup of $G$.
 6. **Center Preservation**: $\varphi(Z(G)) = Z(G')$, where $Z(G)$ and $Z(G')$ denote the centers of $G$ and $G'$, respectively.
 
 ---
@@ -178,7 +178,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 #### 4. Subgroup Preservation
 
-- **Statement**: If $K$ is a subgroup of $G$, then $\varphi(K) = \{ \varphi(k) \mid k \in K \}$ is a subgroup of $G'$.
+- **Statement**: If $K$ is a subgroup of $G$, then $\varphi(K) = \lbrace  \varphi(k) \mid k \in K \rbrace$ is a subgroup of $G'$.
 - **Proof**:
   - To show $\varphi(K)$ is a subgroup of $G'$, we need to confirm it is closed under the group operation, contains the identity, and contains inverses for its elements.
     - **Closure**: For any $k_1, k_2 \in K$, $k_1 k_2 \in K$, so $\varphi(k_1 k_2) = \varphi(k_1) \varphi(k_2) \in \varphi(K)$, proving closure.
@@ -190,7 +190,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 #### 5. Subgroup Preservation under Inverse
 
-- **Statement**: If $K'$ is a subgroup of $G'$, then $\varphi^{-1}(K') = \{ g \in G \mid \varphi(g) \in K' \}$ is a subgroup of $G$.
+- **Statement**: If $K'$ is a subgroup of $G'$, then $\varphi^{-1}(K') = \lbrace  g \in G \mid \varphi(g) \in K' \rbrace$ is a subgroup of $G$.
 - **Proof**:
   - To verify $\varphi^{-1}(K')$ is a subgroup of $G$, we check closure, identity, and inverses:
     - **Closure**: For $g_1, g_2 \in \varphi^{-1}(K')$, we have $\varphi(g_1), \varphi(g_2) \in K'$ and thus $\varphi(g_1 g_2) = \varphi(g_1)\varphi(g_2) \in K'$, so $g_1 g_2 \in \varphi^{-1}(K')$.
@@ -204,7 +204,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 - **Statement**: $\varphi(Z(G)) = Z(G')$, where $Z(G)$ and $Z(G')$ denote the centers of $G$ and $G'$, respectively.
 - **Proof**:
-  - Recall the center of $G$ is $Z(G) = \{ z \in G \mid zg = gz \text{ for all } g \in G \}$.
+  - Recall the center of $G$ is $Z(G) = \lbrace  z \in G \mid zg = gz \text{ for all } g \in G \rbrace$.
   - If $z \in Z(G)$, then $z$ commutes with every element of $G$. Applying $\varphi$, we get:
     $$
     \varphi(z) \varphi(g) = \varphi(g) \varphi(z) \quad \text{for all } g \in G.
@@ -266,11 +266,11 @@ Since $\text{Aut}(G)$ satisfies closure, identity, inverses, and associativity, 
 
 ### Proof for $\text{Inn}(G)$
 
-To show that $\text{Inn}(G)$ forms a group, we’ll use similar steps to those used for $\text{Aut}(G)$. Note that $\text{Inn}(G) \subseteq \text{Aut}(G)$, as each inner automorphism is an automorphism.
+To show that $\text{Inn}(G)$ forms a group, we'll use similar steps to those used for $\text{Aut}(G)$. Note that $\text{Inn}(G) \subseteq \text{Aut}(G)$, as each inner automorphism is an automorphism.
 
 1. **Definition of $\text{Inn}(G)$**:
    - Each inner automorphism of $G$ is defined by $\varphi_a(x) = axa^{-1}$ for a fixed $a \in G$ and all $x \in G$.
-   - The set $\text{Inn}(G) = \{ \varphi_a \mid a \in G \}$ includes all such inner automorphisms.
+   - The set $\text{Inn}(G) = \lbrace  \varphi_a \mid a \in G \rbrace$ includes all such inner automorphisms.
 
 #### 1. Closure
 
@@ -300,7 +300,7 @@ To show that $\text{Inn}(G)$ forms a group, we’ll use similar steps to those u
 
 Since $\text{Inn}(G)$ satisfies closure, identity, inverses, and associativity, it forms a group under function composition.
 
-Let’s proceed with a detailed, step-by-step proof of **Theorem 6.4: Aut($\mathbb{Z}_n$) ≈ $U(n)$**, ensuring each element is rigorously verified.
+Let's proceed with a detailed, step-by-step proof of **Theorem 6.4: Aut($\mathbb{Z}_n$) ≈ $U(n)$**, ensuring each element is rigorously verified.
 
 ---
 
@@ -316,7 +316,7 @@ For every positive integer $n$, the automorphism group of the cyclic group $\mat
 #### Step 1: Define and Characterize $\text{Aut}(\mathbb{Z}_n)$
 
 1. **Structure of $\mathbb{Z}_n$**:
-   - $\mathbb{Z}_n$ is the group of integers $\{0, 1, 2, \ldots, n - 1\}$ under addition modulo $n$.
+   - $\mathbb{Z}_n$ is the group of integers $\lbrace 0, 1, 2, \ldots, n - 1\rbrace$ under addition modulo $n$.
    - Since $\mathbb{Z}_n$ is a cyclic group, it has a generator, namely $1$, meaning every element in $\mathbb{Z}_n$ can be expressed as $k \cdot 1$ for some integer $k$.
 
 2. **Automorphisms of $\mathbb{Z}_n$**:
@@ -333,7 +333,7 @@ For every positive integer $n$, the automorphism group of the cyclic group $\mat
 
 #### Step 2: Define $T: \text{Aut}(\mathbb{Z}_n) \rightarrow U(n)$
 
-To establish an isomorphism, we’ll construct a bijective homomorphism $T$ from $\text{Aut}(\mathbb{Z}_n)$ to $U(n)$, showing they are structurally identical.
+To establish an isomorphism, we'll construct a bijective homomorphism $T$ from $\text{Aut}(\mathbb{Z}_n)$ to $U(n)$, showing they are structurally identical.
 
 1. **Definition of $T$**:
    - For each $\varphi \in \text{Aut}(\mathbb{Z}_n)$, define $T(\varphi) = \varphi(1)$.
@@ -367,16 +367,16 @@ To establish an isomorphism, we’ll construct a bijective homomorphism $T$ from
 
 Since $T$ is a bijective homomorphism, it is an isomorphism. Therefore, $\text{Aut}(\mathbb{Z}_n) \approx U(n)$.
 
-### Theorem 6.5: Cayley’s Theorem
+### Theorem 6.5: Cayley's Theorem
 
 #### Statement
 Every group $G$ is isomorphic to a subgroup of the symmetric group on $G$. In other words, every group is isomorphic to a group of permutations.
 
 ---
 
-### Proof of Cayley’s Theorem
+### Proof of Cayley's Theorem
 
-To prove Cayley’s Theorem, we’ll construct an injective homomorphism from $G$ into the symmetric group $S_G$, the group of all permutations on the set $G$. We do this by associating each element of $G$ with a permutation (specifically, a left multiplication map).
+To prove Cayley's Theorem, we'll construct an injective homomorphism from $G$ into the symmetric group $S_G$, the group of all permutations on the set $G$. We do this by associating each element of $G$ with a permutation (specifically, a left multiplication map).
 
 #### Step 1: Define Left Multiplication Maps
 
@@ -445,12 +445,12 @@ Define $\Phi: G \rightarrow S_G$ by setting $\Phi(g) = T_g$ for each $g \in G$. 
 
 #### Step 6: Conclude that $\Phi(G)$ is a Subgroup of $S_G$
 
-Since $\Phi$ is an injective homomorphism from $G$ into $S_G$, the image $\Phi(G) = \{ T_g \mid g \in G \}$ is isomorphic to $G$ and is a subgroup of $S_G$.
+Since $\Phi$ is an injective homomorphism from $G$ into $S_G$, the image $\Phi(G) = \lbrace  T_g \mid g \in G \rbrace$ is isomorphic to $G$ and is a subgroup of $S_G$.
 
 
-### Example 1: Cayley’s Theorem Applied to $\mathbb{Z}_3$
+### Example 1: Cayley's Theorem Applied to $\mathbb{Z}_3$
 
-Consider the group $\mathbb{Z}_3 = \{0, 1, 2\}$ under addition modulo 3.
+Consider the group $\mathbb{Z}_3 = \lbrace 0, 1, 2\rbrace$ under addition modulo 3.
 
 1. **Defining the Group Elements**:
    - The group $\mathbb{Z}_3$ has three elements: $0, 1,$ and $2$, where the operation is addition modulo 3.
@@ -481,7 +481,7 @@ Consider the group $\mathbb{Z}_3 = \{0, 1, 2\}$ under addition modulo 3.
 
 ---
 
-### Example 2: Cayley’s Theorem Applied to $D_3$, the Symmetry Group of a Triangle
+### Example 2: Cayley's Theorem Applied to $D_3$, the Symmetry Group of a Triangle
 
 Consider $D_3$, the dihedral group representing the symmetries of an equilateral triangle, with elements $e, r, r^2, s, rs, r^2s$.
 

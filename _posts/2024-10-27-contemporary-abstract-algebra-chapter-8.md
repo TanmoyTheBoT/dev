@@ -1,6 +1,6 @@
 ---
-title: "Contemporary Abstract Algebra: Chapter 8"
-description: This is a AI-generated note from the book Contemporary Abstract Algebra
+title: "[WIP] Contemporary Abstract Algebra: Chapter 8"
+description: My notes on chapter 8 of the book Contemporary Abstract Algebra (supported by AI)  
 date: 2024-10-27
 categories:
   - technical
@@ -28,14 +28,14 @@ Let $G_1, G_2, \dots, G_n$ be a finite collection of groups. The **external dire
 
 In mathematical notation:
 $$
-G_1 \oplus G_2 \oplus \cdots \oplus G_n = \{ (g_1, g_2, \dots, g_n) \mid g_i \in G_i \text{ for each } i \}
+G_1 \oplus G_2 \oplus \cdots \oplus G_n = \lbrace  (g_1, g_2, \dots, g_n) \mid g_i \in G_i \text{ for each } i \rbrace
 $$
 
 The operation for combining two elements $(g_1, g_2, \dots, g_n)$ and $(h_1, h_2, \dots, h_n)$ in $G_1 \oplus G_2 \oplus \cdots \oplus G_n$ is defined componentwise:
 $$
 (g_1, g_2, \dots, g_n) \cdot (h_1, h_2, \dots, h_n) = (g_1 h_1, g_2 h_2, \dots, g_n h_n)
 $$
-where the operation $g_i h_i$ is performed within each group $G_i$ according to that group’s specific operation.
+where the operation $g_i h_i$ is performed within each group $G_i$ according to that group's specific operation.
 
 #### **Properties of the External Direct Product**
 
@@ -54,11 +54,11 @@ where the operation $g_i h_i$ is performed within each group $G_i$ according to 
 
 #### **Example of an External Direct Product**
 
-Consider the groups $U(8) = \{1, 3, 5, 7\}$ and $U(10) = \{1, 3, 7, 9\}$, where each group is taken under multiplication modulo its respective modulus. The external direct product $U(8) \oplus U(10)$ consists of all ordered pairs $(a, b)$ where $a \in U(8)$ and $b \in U(10)$. 
+Consider the groups $U(8) = \lbrace 1, 3, 5, 7\rbrace$ and $U(10) = \lbrace 1, 3, 7, 9\rbrace$, where each group is taken under multiplication modulo its respective modulus. The external direct product $U(8) \oplus U(10)$ consists of all ordered pairs $(a, b)$ where $a \in U(8)$ and $b \in U(10)$. 
 
 The elements of $U(8) \oplus U(10)$ are:
 $$
-U(8) \oplus U(10) = \{ (1,1), (1,3), (1,7), (1,9), (3,1), (3,3), (3,7), (3,9), (5,1), (5,3), (5,7), (5,9), (7,1), (7,3), (7,7), (7,9) \}
+U(8) \oplus U(10) = \lbrace  (1,1), (1,3), (1,7), (1,9), (3,1), (3,3), (3,7), (3,9), (5,1), (5,3), (5,7), (5,9), (7,1), (7,3), (7,7), (7,9) \rbrace
 $$
 Each element in $U(8) \oplus U(10)$ represents a unique combination of elements from $U(8)$ and $U(10)$, and their product is calculated by componentwise multiplication modulo 8 for the first component and modulo 10 for the second component.
 
@@ -69,23 +69,23 @@ The external direct product is a fundamental concept in group theory, allowing u
 This section illustrates practical applications of external direct products in various fields, highlighting the broad utility of the concepts covered.
 
 #### **1. Data Security**
-Binary strings are often represented as elements of $Z_2 \oplus Z_2 \oplus \cdots \oplus Z_2$, where each bit in the string corresponds to an element in the direct product. For example, the binary string $11000110$ can be viewed as the element $(1, 1, 0, 0, 0, 1, 1, 0)$ in $Z_2 \oplus Z_2 \oplus \cdots \oplus Z_2$ (eight copies).
+Binary strings are often represented as elements of $\mathbb{Z}_2 \oplus \mathbb{Z}_2 \oplus \cdots \oplus \mathbb{Z}_2$, where each bit in the string corresponds to an element in the direct product. For example, the binary string $11000110$ can be viewed as the element $(1, 1, 0, 0, 0, 1, 1, 0)$ in $\mathbb{Z}_2 \oplus \mathbb{Z}_2 \oplus \cdots \oplus \mathbb{Z}_2$ (eight copies).
 
 When two binary strings are added componentwise modulo 2, the resulting sum corresponds to bitwise addition (XOR). This is foundational for encryption techniques like the **One-Time Pad**, where a random binary key is used to encode a message. The security of this system comes from the fact that without the key, the encoded message appears random.
 
 #### **2. Public Key Cryptography**
 Public key cryptography, particularly the **RSA encryption scheme**, leverages the properties of modular arithmetic and the difficulty of factorizing large numbers. RSA requires selecting two large primes $p$ and $q$ and computing $n = pq$. Public keys are derived based on these values, and while the encryption method is public, only the private key holder can decode the message due to the computational difficulty of determining $p$ and $q$ from $n$.
 
-For example, if Alice wants to send a secure message to Bob, she can encode her message as $M^e \mod n$ using Bob’s public key. Only Bob can decode the message using his private key, even though the encryption method is known.
+For example, if Alice wants to send a secure message to Bob, she can encode her message as $M^e \mod n$ using Bob's public key. Only Bob can decode the message using his private key, even though the encryption method is known.
 
 #### **3. Digital Signatures**
-In financial transactions, digital signatures authenticate that a message originates from the claimed sender. Using external direct products in modular arithmetic allows the message to be encoded by the sender’s private key. The receiver verifies it using the sender’s public key, confirming authenticity and integrity.
+In financial transactions, digital signatures authenticate that a message originates from the claimed sender. Using external direct products in modular arithmetic allows the message to be encoded by the sender's private key. The receiver verifies it using the sender's public key, confirming authenticity and integrity.
 
 #### **4. Genetics**
-In genetics, nitrogen bases in DNA sequences (A, T, G, C) can be represented as elements in $Z_4 \oplus Z_4 \oplus \cdots \oplus Z_4$ (one copy per nitrogen base). Each nitrogen base is mapped to an integer in $Z_4$ (e.g., A = 0, T = 2, G = 1, C = 3), and DNA strands can be modeled as sequences in this external direct product. This representation aids in comparing genetic sequences and understanding complementary DNA structures.
+In genetics, nitrogen bases in DNA sequences (A, T, G, C) can be represented as elements in $\mathbb{Z}_4 \oplus \mathbb{Z}_4 \oplus \cdots \oplus \mathbb{Z}_4$ (one copy per nitrogen base). Each nitrogen base is mapped to an integer in $\mathbb{Z}_4$ (e.g., A = 0, T = 2, G = 1, C = 3), and DNA strands can be modeled as sequences in this external direct product. This representation aids in comparing genetic sequences and understanding complementary DNA structures.
 
 #### **5. Electric Circuits**
-Electrical systems with multiple switches controlling a single light can be analyzed using direct product structures. For instance, if two switches are represented by elements in $Z_2 \oplus Z_2$, then flipping a switch corresponds to adding 1 to its component. The light’s state (on/off) is determined by the subgroup generated by specific configurations of the switches.
+Electrical systems with multiple switches controlling a single light can be analyzed using direct product structures. For instance, if two switches are represented by elements in $\mathbb{Z}_2 \oplus \mathbb{Z}_2$, then flipping a switch corresponds to adding 1 to its component. The light's state (on/off) is determined by the subgroup generated by specific configurations of the switches.
 
 For example, if the light is on when both switches are up, this corresponds to $(0, 0)$. Each switch flip alters the light state, simulating a real-world circuit in group terms.
 

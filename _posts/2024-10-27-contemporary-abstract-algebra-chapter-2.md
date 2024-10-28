@@ -1,6 +1,6 @@
 ---
 title: "Contemporary Abstract Algebra: Chapter 2"
-description: This is a AI-generated note from the book Contemporary Abstract Algebra
+description: My notes on chapter 2 of the book Contemporary Abstract Algebra (supported by AI) 
 date: 2024-10-27
 categories:
   - technical
@@ -109,10 +109,10 @@ This section provides insight into the impact of non-commutative properties with
 
 - In 1925, quantum mechanics was an emerging field filled with complex and ambiguous problems. One breakthrough came from physicist **Werner Heisenberg**, who observed that the product of certain quantum analogs of classical functions did not follow the commutative property. This meant that for two elements $X$ and $Y$ in this system, $XY \neq YX$.
 
-- Heisenberg found this discovery uncomfortable, referring to non-commutativity as the only troubling aspect in his otherwise well-formed theory. Unsure about his conclusions, he sought advice from his mentor, **Max Born**, who recognized the potential of Heisenberg’s work.
+- Heisenberg found this discovery uncomfortable, referring to non-commutativity as the only troubling aspect in his otherwise well-formed theory. Unsure about his conclusions, he sought advice from his mentor, **Max Born**, who recognized the potential of Heisenberg's work.
 
 - Max Born, with his student **Pascual Jordan**, reformulated Heisenberg's concepts using matrix theory, giving birth to the matrix mechanics formulation of quantum mechanics. Though Heisenberg had limited knowledge of matrices, his insight led to significant advancements in physics.
 
-- Heisenberg, Born, and **Paul Dirac** were awarded the Nobel Prize for these groundbreaking contributions, though Heisenberg later expressed his regret that Born’s contributions were not fully recognized initially. Born eventually received the Nobel Prize in 1954 for his work in quantum mechanics, completing the acknowledgment of this revolutionary discovery.
+- Heisenberg, Born, and **Paul Dirac** were awarded the Nobel Prize for these groundbreaking contributions, though Heisenberg later expressed his regret that Born's contributions were not fully recognized initially. Born eventually received the Nobel Prize in 1954 for his work in quantum mechanics, completing the acknowledgment of this revolutionary discovery.
 
 This historical note highlights the broader implications of abstract group theory concepts, particularly non-commutativity, in shaping modern physics and expanding our understanding of the mathematical foundations of reality.
