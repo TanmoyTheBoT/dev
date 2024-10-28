@@ -21,13 +21,13 @@ Starting with **Definitions and Basic Notations** and the **Examples of Permutat
 
 ## Definitions and Basic Notations
 
-1. **Permutation of a Set $A$**:
-   A permutation of a set $A$ is defined as a function $f: A \rightarrow A$ that is **bijective** (both one-to-one and onto). This means every element in $A$ maps uniquely to another element in $A$, covering all elements without repetition or omission.
+1. **Permutation of a Set $A$**:  
+   A permutation of a set $A$ is defined as a function $f: A \rightarrow A$ that is **bijective** (both one-to-one and onto). This means every element in $A$ maps uniquely to another element in $A$, while also covering all elements without repetition or omission.
 
-2. **Permutation Group of a Set $A$**:
+2. **Permutation Group of a Set $A$**:  
    The permutation group of $A$, denoted $S_A$, consists of all permutations of $A$ under the operation of function composition. This group operation satisfies closure, associativity, the presence of an identity element, and the existence of inverses, making it a valid group.
 
-3. **Symmetric Group $S_n$**:
+3. **Symmetric Group $S_n$**:  
    When $A$ is a finite set $\lbrace 1, 2, \dots, n\rbrace$, the permutation group on $A$ is called the **symmetric group** of degree $n$, denoted by $S_n$. It contains all possible permutations of $n$ elements, giving it an order of $n!$ (factorial of $n$).
 
 ## Examples of Permutation Groups
@@ -148,23 +148,37 @@ Since $\alpha \beta$ and $\beta \alpha$ act identically on all elements of $S$, 
 
 ### **Theorem 5.3: Order of a Permutation**
 
-**Statement**: The order of a permutation of a finite set written in disjoint cycle form is the least common multiple (LCM) of the lengths of its cycles.
+**Statement**: The order of a permutation written in disjoint cycle form is the least common multiple (LCM) of the lengths of its cycles.
 
 #### Proof of Theorem 5.3
-
-Let $\alpha$ be a permutation on $A$ with disjoint cycle decomposition:
+ 
+Let $\alpha$ be a permutation on a finite set $A$, and suppose $\alpha$ can be written as a product of disjoint cycles:
 $$
-\alpha = (a_1\ a_2\ \dots\ a_m)(b_1\ b_2\ \dots\ b_n) \dots (c_1\ c_2\ \dots\ c_k)
+\alpha = (a_1\ a_2\ \dots\ a_{m_1})(b_1\ b_2\ \dots\ b_{m_2}) \dots (c_1\ c_2\ \dots\ c_{m_r})
 $$
+where each cycle is disjoint from the others and has lengths $m_1, m_2, \dots, m_r$, respectively.
 
-1. **Order of Each Cycle**:
-   - Each cycle $(a_1\ a_2\ \dots\ a_m)$ has order $m$, meaning that applying this cycle $m$ times brings each element back to its starting position.
-   - Similarly, the cycle $(b_1\ b_2\ \dots\ b_n)$ has order $n$, and so on for each disjoint cycle in the decomposition.
+Our goal is to show that the order of $\alpha$, denoted $t$, is the least common multiple of $m_1, m_2, \dots, m_r$, i.e., $t = \text{lcm}(m_1, m_2, \dots, m_r)$.
 
-2. **Order of $\alpha$ as a Product**:
-   - Since the cycles are disjoint, they do not interfere with each other.
-   - The permutation $\alpha$ returns all elements to their original positions when each cycle in the decomposition has returned to its starting position.
-   - Thus, the order of $\alpha$ is the least common multiple of the lengths of the cycles: $\text{lcm}(m, n, \dots, k)$.
+##### Step 1: Define the Least Common Multiple of the Cycle Lengths
+
+Let $k = \text{lcm}(m_1, m_2, \dots, m_r)$. By definition, $k$ is the smallest positive integer that is a multiple of each $m_i$ (the length of each cycle). Thus, $\alpha^k = \epsilon$ (the identity permutation), because applying $\alpha$ $k$ times completes each cycle, bringing every element in each cycle back to its original position.
+
+This means that $k$ is a possible period for $\alpha$, so we have $t$ divides $k$, since $t$ is the smallest positive integer such that $\alpha^t = \epsilon$.
+
+##### Step 2: The Order $t$ of $\alpha$ Must Divide $k$
+
+Since $\alpha^t = \epsilon$, each disjoint cycle in $\alpha$ must also return to the identity when raised to the power $t$. Thus, $t$ must be a multiple of each $m_i$, the length of each disjoint cycle in $\alpha$. This implies that $t$ is a common multiple of $m_1, m_2, \dots, m_r$.
+
+Since $k$ is the least common multiple of $m_1, m_2, \dots, m_r$, it follows that $k$ divides $t$ because $k$ is the LCM.
+
+##### Step 3: Conclude that $t = k$
+
+So since $t$ divides $k$ and $k$ divides $t$, it must be the case that $t = k$.
+Thus, the order $t$ of $\alpha$ is precisely $k$, the least common multiple of the lengths of the disjoint cycles
+$$
+t = \text{lcm}(m_1, m_2, \dots, m_r)
+$$
 
 This completes the proof.
 
