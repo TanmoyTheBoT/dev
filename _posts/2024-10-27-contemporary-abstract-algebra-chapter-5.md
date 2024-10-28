@@ -1,5 +1,5 @@
 ---
-title: "[WIP] Contemporary Abstract Algebra: Chapter 5"
+title: "Contemporary Abstract Algebra: Chapter 5"
 description: My notes on chapter 5 of the book Contemporary Abstract Algebra (supported by AI)  
 date: 2024-10-27
 categories:
@@ -151,7 +151,7 @@ Since $\alpha \beta$ and $\beta \alpha$ act identically on all elements of $S$, 
 **Statement**: The order of a permutation written in disjoint cycle form is the least common multiple (LCM) of the lengths of its cycles.
 
 #### Proof of Theorem 5.3
- 
+
 Let $\alpha$ be a permutation on a finite set $A$, and suppose $\alpha$ can be written as a product of disjoint cycles:
 $$
 \alpha = (a_1\ a_2\ \dots\ a_{m_1})(b_1\ b_2\ \dots\ b_{m_2}) \dots (c_1\ c_2\ \dots\ c_{m_r})
@@ -202,32 +202,35 @@ Let $\alpha = (a_1\ a_2\ \dots\ a_k)$ be a cycle of length $k$ where $k \geq 2$.
 
 Thus, every permutation in $S_n$ is a product of 2-cycles.
 
+---
+  
 ### **Theorem 5.5: Always Even or Always Odd**
 
 **Statement**: If a permutation $\alpha$ can be expressed as a product of an even (or odd) number of 2-cycles, then every decomposition of $\alpha$ into a product of 2-cycles must have an even (or odd) number of 2-cycles. In other words, the parity (evenness or oddness) of the number of 2-cycles in a decomposition is invariant.
 
+In symbols, if $\alpha = \beta_1 \beta_2 \cdots \beta_r$ and $\alpha = \gamma_1 \gamma_2 \cdots \gamma_s$
+where the $\beta$'s and the $\gamma$'s are 2-cycles, then $r$ and $s$ are both even or both odd.
+
 #### Proof of Theorem 5.5
-
-Let $\alpha = \beta_1 \beta_2 \dots \beta_r = \gamma_1 \gamma_2 \dots \gamma_s$, where $\beta_i$ and $\gamma_i$ are 2-cycles, and $r$ and $s$ denote the number of 2-cycles in each decomposition, respectively.
-
-1. **Equating Two Decompositions**:
-   - Since $\alpha$ can be decomposed into both $r$ and $s$ 2-cycles, we can write:
+  
+   - Suppose $\alpha$ is a permutation that can be written in two ways as products of 2-cycles:
      $$
-     \beta_1 \beta_2 \dots \beta_r = \gamma_1 \gamma_2 \dots \gamma_s
+     \alpha = \beta_1 \beta_2 \cdots \beta_r = \gamma_1 \gamma_2 \cdots \gamma_s,
      $$
-
-2. **Considering the Identity**:
-   - Multiply both sides by the inverse of $\alpha$:
+     where the $\beta$'s and $\gamma$'s are 2-cycles, and $r$ and $s$ are the numbers of 2-cycles in each decomposition, respectively.
+   - From the equation above, we can write:
      $$
-     \alpha \alpha^{-1} = (\gamma_1 \gamma_2 \dots \gamma_s)(\beta_r \dots \beta_2 \beta_1) = \epsilon
+     \epsilon = \gamma_1 \gamma_2 \cdots \gamma_s \beta_r^{-1} \cdots \beta_2^{-1} \beta_1^{-1},
      $$
-   - This shows that the identity permutation $\epsilon$ can be written as a product of $r + s$ 2-cycles.
-
-3. **Parity Argument**:
-   - If $r$ is even, then $s$ must also be even because a product of an odd number of 2-cycles cannot produce the identity permutation.
-   - Similarly, if $r$ is odd, $s$ must also be odd.
-
-Therefore, every decomposition of a permutation into 2-cycles must have the same parity. This implies that permutations are classified as either **even** (product of an even number of 2-cycles) or **odd** (product of an odd number of 2-cycles), proving that this parity is invariant.
+     where $\epsilon$ denotes the identity permutation.
+   - Since a 2-cycle is its own inverse (i.e., $\beta_i = \beta_i^{-1}$ and $\gamma_i = \gamma_i^{-1}$), we can rewrite this expression as:
+     $$
+     \epsilon = \gamma_1 \gamma_2 \cdots \gamma_s \beta_r \cdots \beta_2 \beta_1.
+     $$
+   - This expression shows that we have written the identity permutation $\epsilon$ as a product of $r + s$ 2-cycles.
+   - The lemma preceding Theorem 5.5 guarantees that the identity permutation can only be written as a product of an **even** number of 2-cycles.
+   - Therefore, $r + s$ must be even.
+   - Since $r + s$ is even, it follows that $r$ and $s$ must both be even or both be odd. This implies that the parity of the number of 2-cycles in any decomposition of $\alpha$ is invariant.
 
 ---
 
@@ -316,7 +319,7 @@ Using **Theorem 5.6** on even permutations forming a subgroup:
      $$
      (12)(34), (13)(24), (14)(23)
      $$
-     along with 3-cycles like $(123)$ and $(132)$.
+     along with 3-cycles like $(123) = (1 2)(1 3)$ and $(132) = (1 2)(1 3)$.
    - By **Theorem 5.7**, $A_4$ has half the order of $S_4$, hence 12 elements.
 
 ### **Example 3: Properties of Even and Odd Permutations in $S_3$**
@@ -326,7 +329,7 @@ Using **Theorem 5.5** on the parity of permutations:
 1. **Elements of $S_3$**:
    - In $S_3$, the elements are:
      $$
-     \epsilon = (1)(2)(3),\quad (12),\quad (13),\quad (23),\quad (123),\quad (132)
+     \epsilon = (1)(2)(3), (12), (13), (23), (123), (132)
      $$
 
 2. **Parity Classification**:
