@@ -1,5 +1,5 @@
 ---
-title: "Contemporary Abstract Algebra: Chapter 5"
+title: "CAA: Chapter 5"
 description: My notes on chapter 5 of the book Contemporary Abstract Algebra (supported by AI)  
 date: 2024-10-27
 categories:
@@ -203,7 +203,7 @@ Let $\alpha = (a_1\ a_2\ \dots\ a_k)$ be a cycle of length $k$ where $k \geq 2$.
 Thus, every permutation in $S_n$ is a product of 2-cycles.
 
 ---
-  
+
 ### **Theorem 5.5: Always Even or Always Odd**
 
 **Statement**: If a permutation $\alpha$ can be expressed as a product of an even (or odd) number of 2-cycles, then every decomposition of $\alpha$ into a product of 2-cycles must have an even (or odd) number of 2-cycles. In other words, the parity (evenness or oddness) of the number of 2-cycles in a decomposition is invariant.

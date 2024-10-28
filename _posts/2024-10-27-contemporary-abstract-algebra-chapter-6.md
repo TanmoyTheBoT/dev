@@ -1,5 +1,5 @@
 ---
-title: "[WIP] Contemporary Abstract Algebra: Chapter 6"
+title: "[WIP] CAA: Chapter 6"
 description: My notes on chapter 6 of the book Contemporary Abstract Algebra (supported by AI) 
 date: 2024-10-27
 categories:

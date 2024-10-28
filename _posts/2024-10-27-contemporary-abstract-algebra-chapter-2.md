@@ -1,5 +1,5 @@
 ---
-title: "Contemporary Abstract Algebra: Chapter 2"
+title: "CAA: Chapter 2"
 description: My notes on chapter 2 of the book Contemporary Abstract Algebra (supported by AI) 
 date: 2024-10-27
 categories:
