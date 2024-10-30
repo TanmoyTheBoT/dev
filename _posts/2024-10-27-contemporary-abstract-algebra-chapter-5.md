@@ -204,6 +204,84 @@ Thus, every permutation in $S_n$ is a product of 2-cycles.
 
 ---
 
+### Lemma: If $\epsilon = \beta_1 \beta_2 \cdots \beta_r$, where the $\beta$'s are 2-cycles, then $r$ is even
+
+#### Proof of Lemma
+
+This proof uses **induction** on $r$, the number of 2-cycles. The goal is to show that if $\epsilon$ (the identity permutation) can be written as a product of 2-cycles, then the number of 2-cycles, $r$, must be even.
+
+---
+
+##### **Step 1: Base Cases**
+
+1. **Case $r = 1$:**  
+   - If $r = 1$, then we have only one 2-cycle $\beta_1$. 
+   - A single 2-cycle (such as $(a\ b)$) is **not** the identity permutation because it swaps two elements.
+   - Thus, $r = 1$ cannot represent the identity, so $r = 1$ is impossible for $\epsilon$.
+
+2. **Case $r = 2$:**  
+   - If $r = 2$, then we have $\epsilon = \beta_1 \beta_2$, where each $\beta_i$ is a 2-cycle.
+   - For example, $\epsilon = (a\ b)(a\ b)$ results in the identity, since applying the same 2-cycle twice returns each element to its original position.
+   - Therefore, $r = 2$ **does represent the identity**, so $r = 2$ is even, as required.
+
+   Having established the base cases, we proceed with the induction step.
+
+---
+
+##### **Step 2: Inductive Hypothesis**
+
+Assume that for any product of an **even number** $r - 2$ of 2-cycles, the product represents the identity permutation. In other words, we assume:
+
+- If $\epsilon = \beta_1 \beta_2 \cdots \beta_{r-2}$, then $r - 2$ is even.
+
+We will use this hypothesis to prove that $r$ (which is assumed to be greater than 2 and odd) leads to a contradiction, thereby showing that $r$ must be even.
+
+---
+
+##### **Step 3: Inductive Step - Handling the Last 2-Cycles**
+
+Suppose we have $r > 2$ and that the rightmost 2-cycle is $(a\ b)$. We analyze the possible forms of the product $\beta_{r-1} \beta_r$ (the last two 2-cycles in the sequence) to simplify the expression. We can consider the following cases for $\beta_{r-1} \beta_r$:
+
+1. **Case 1**: $\beta_{r-1} \beta_r = (a\ b)(a\ b) = \epsilon$.  
+   - If the last two 2-cycles are identical, we can simplify $\beta_{r-1} \beta_r = \epsilon$, effectively removing these two 2-cycles from the product.
+   - We then have:
+     $$
+     \epsilon = \beta_1 \beta_2 \cdots \beta_{r-2},
+     $$
+     which is a product of $r - 2$ 2-cycles.
+   - By the inductive hypothesis, $r - 2$ is even, so $r$ must also be even (since adding 2 to an even number keeps it even).
+
+   This completes the proof for this case, as we’ve shown that if $\beta_{r-1} \beta_r = (a\ b)(a\ b)$, then $r$ is even.
+
+2. **Other Cases**: If $\beta_{r-1} \beta_r$ does not equal $\epsilon$, we proceed as follows.  
+    The possible forms of $\beta_{r-1} \beta_r$, given that each is a 2-cycle, are:
+
+    1. **Case 2**: $\beta_{r-1} \beta_r = (a\ b)(b\ c) = (a\ c)(a\ b)$
+        - In this case, the product $(a\ c)(a\ b)$ is replaced by $(a\ b)(b\ c)$.
+        - This substitution creates a new product where the rightmost occurrence of $a$ is now in the second-from-the-right 2-cycle, rather than in the rightmost 2-cycle.
+        - We now have a new product of $r$ 2-cycles, but the position of $a$ has shifted one position to the left.
+
+    2. **Case 3**: $\beta_{r-1} \beta_r = (a\ c)(c\ b) = (b\ c)(a\ b)$
+        - Similarly, in this case, the product $(b\ c)(a\ b)$ is replaced by $(a\ c)(c\ b)$.
+        - This again shifts the rightmost occurrence of $a$ to the second-from-the-right position, while maintaining the structure of the product.
+        - We now have a new product of $r$ 2-cycles, with the rightmost occurrence of $a$ shifted one position to the left.
+
+    3. **Case 4**: $\beta_{r-1} \beta_r = (a\ b)(c\ d) = (c\ d)(a\ b)$
+        - In this case, $(c\ d)(a\ b)$ is replaced by $(a\ b)(c\ d)$.
+        - Here, neither 2-cycle contains $a$ in the rightmost position, but the form of the product remains consistent.
+
+In each of **Cases 2, 3, and 4**, we end up with a new product that has the following properties:
+
+- It still represents the identity permutation $\epsilon$.
+- The rightmost occurrence of $a$ is shifted one position to the left in the sequence.
+
+By continuing this process for $\beta_{r-2} \beta_{r-1}$ and so on, we will eventually either:
+
+1. Reach a situation similar to **Case 1**, where $\beta_{r-1} \beta_r = (a\ b)(a\ b) = \epsilon$, allowing us to remove two cycles, reduce the product to a form with **only $r - 2$ 2-cycles**, or
+2. Reach a new product with $r$ 2-cycles with $a$ in $\beta_{r-3}$. This process will continue until we reach a form similar to **Case 1**, where we can simplify the product to a form with only $r - 2$ 2-cycles. Because if otherwise, then we would have the only occurrence of $a$ in $\beta_{1}$, which would not change $a$ back to the original position, leads to a contradiction.
+
+So my the Second Principle of Mathematical Induction, since $r - 2$ is even, $r$ must also be even.
+
 ### **Theorem 5.5: Always Even or Always Odd**
 
 **Statement**: If a permutation $\alpha$ can be expressed as a product of an even (or odd) number of 2-cycles, then every decomposition of $\alpha$ into a product of 2-cycles must have an even (or odd) number of 2-cycles. In other words, the parity (evenness or oddness) of the number of 2-cycles in a decomposition is invariant.

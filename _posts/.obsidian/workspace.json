@@ -8,21 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "73ef33c2ad252618",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024-10-27-contemporary-abstract-algebra-chapter-6.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024-10-27-contemporary-abstract-algebra-chapter-6"
-            }
-          },
-          {
             "id": "19c4e5bf09378c99",
             "type": "leaf",
             "state": {
@@ -195,26 +180,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "73ef33c2ad252618",
+  "active": "19c4e5bf09378c99",
   "lastOpenFiles": [
-    "2024-10-27-contemporary-abstract-algebra-chapter-4.md",
-    "2024-10-27-contemporary-abstract-algebra-chapter-3.md",
+    "2024-10-27-database-system-concepts-chapter-1.md",
+    "2024-10-27-database-system-concepts-chapter-2.md",
     "2024-10-27-contemporary-abstract-algebra-chapter-5.md",
-    "2024-10-27-contemporary-abstract-algebra-chapter-6.md",
     "2024-10-27-contemporary-abstract-algebra-chapter-8.md",
-    "2024-10-27-contemporary-abstract-algebra-chapter-7.md",
     "2024-10-27-contemporary-abstract-algebra-chapter-2.md",
+    "2024-10-27-contemporary-abstract-algebra-chapter-3.md",
     "2024-10-27-contemporary-abstract-algebra-chapter-1.md",
-    "2024-10-24-test.md",
-    "Untitled.md",
-    "2024-10-27-technical-subjects-prompt.md",
-    "2024-10-2.md",
-    "2024-10-27-contemporary-abstract-algebra-chapter-9.md",
-    "templates/default.md",
-    "templates/{{date}}-untitled.md",
-    "templates/{{date}}.md",
-    "2024-10-24.md",
-    "templates/TMP.md",
+    "2024-10-27-database-system-concepts-chapter-11.md",
+    "2024-10-27-database-system-concepts-chapter-26.md",
+    "2024-10-27-database-system-concepts-chapter-25 copy.md",
+    "2024-10-27-database-system-concepts-chapter-25.md",
+    "2024-10-27-database-system-concepts-chapter-24 copy.md",
+    "2024-10-27-database-system-concepts-chapter-24.md",
+    "2024-10-27-database-system-concepts-chapter-23 copy.md",
+    "2024-10-27-database-system-concepts-chapter-23.md",
+    "2024-10-27-database-system-concepts-chapter-22 copy.md",
+    "2024-10-27-database-system-concepts-chapter-22.md",
+    "2024-10-27-database-system-concepts-chapter-21 copy.md",
+    "2024-10-27-database-system-concepts-chapter-21.md",
+    "2024-10-27-database-system-concepts-chapter-20 copy.md",
+    "2024-10-27-database-system-concepts-chapter-20.md",
+    "2024-10-27-database-system-concepts-chapter-19 copy.md",
+    "2024-10-27-database-system-concepts-chapter-19.md",
+    "2024-10-27-database-system-concepts-chapter-18 copy.md",
+    "2024-10-27-database-system-concepts-chapter-18.md",
+    "2024-10-27-database-system-concepts-chapter-17 copy.md",
     "templates"
   ]
 }
