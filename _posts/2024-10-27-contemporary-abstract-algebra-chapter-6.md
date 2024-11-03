@@ -15,15 +15,18 @@ mermaid: true
 comments: true
 media_subpath: 
 render_with_liquid: false
-published: false
+published: true
 ---
-### Definitions
+
+## Definitions
 
 1. **Group Isomorphism**
-   - An isomorphism $\varphi$ from a group $G$ to a group $G'$ is a one-to-one and onto mapping (or function) that preserves the group operation. In formal notation:  
-     $$
-     \varphi(ab) = \varphi(a)\varphi(b) \quad \forall a, b \in G.
-     $$
+   - An isomorphism $\varphi$ from a group $G$ to a group $G'$ is a one-to-one and onto mapping that preserves the group operation. In formal notation:  
+
+    $$
+    \varphi(ab) = \varphi(a)\varphi(b) \quad \forall a, b \in G.
+    $$
+
    - If there exists an isomorphism from $G$ onto $G'$, we say that $G$ and $G'$ are **isomorphic** and write $G \approx G'$.
    - It is implicit in the definition of isomorphism that isomorphic groups have the same order.
    - It is also implicit in the definition of isomorphism that the operation on the left side of the equal sign is that of $G$, whereas the operation on the right side is that of $G'$.
@@ -48,7 +51,7 @@ published: false
 
 3. **Inner Automorphism**: For an element $a \in G$, the map $\varphi_a : G \rightarrow G$ defined by $\varphi_a(x) = axa^{-1}$ for all $x \in G$ is called the inner automorphism induced by $a$. The set of all inner automorphisms is denoted $\text{Inn}(G)$.
 
-### Theorem 6.1: Properties of Isomorphisms Acting on Elements
+## Theorem 6.1: Properties of Isomorphisms Acting on Elements
 
 Let $\varphi: G \rightarrow G'$ be an isomorphism between two groups $G$ and $G'$. Then, the following properties hold:
 
@@ -118,7 +121,7 @@ Let $\varphi: G \rightarrow G'$ be an isomorphism between two groups $G$ and $G'
      - Therefore, for any integer $m$, the number of elements of order $m$ in $G$ matches the number of elements of order $m$ in $G'$.
      - Thus, $G$ and $G'$ have identical distributions of element orders if $G$ is finite, completing the proof.
 
-### Theorem 6.2: Properties of Isomorphisms Acting on Groups
+## Theorem 6.2: Properties of Isomorphisms Acting on Groups
 
 Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and $G'$. Then, the following properties hold:
 
@@ -131,9 +134,9 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 ---
 
-#### Proof of Each Property
+### Proof of Each Property
 
-##### 1. Inverse Isomorphism
+#### 1. Inverse Isomorphism
 
 - **Statement**: The inverse function $\varphi^{-1}$ is an isomorphism from $G'$ onto $G$.
 - **Proof**:
@@ -144,7 +147,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 ---
 
-##### 2. Abelianness Preservation
+#### 2. Abelianness Preservation
 
 - **Statement**: $G$ is Abelian if and only if $G'$ is Abelian.
 - **Proof**:
@@ -155,7 +158,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 ---
 
-##### 3. Cyclic Structure Preservation
+#### 3. Cyclic Structure Preservation
 
 - **Statement**: $G$ is cyclic if and only if $G'$ is cyclic.
 - **Proof**:
@@ -167,7 +170,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 ---
 
-##### 4. Subgroup Preservation
+#### 4. Subgroup Preservation
 
 - **Statement**: If $K$ is a subgroup of $G$, then $\varphi(K) = \lbrace  \varphi(k) \mid k \in K \rbrace$ is a subgroup of $G'$.
 - **Proof**:
@@ -179,7 +182,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 ---
 
-##### 5. Subgroup Preservation under Inverse
+#### 5. Subgroup Preservation under Inverse
 
 - **Statement**: If $K'$ is a subgroup of $G'$, then $\varphi^{-1}(K') = \lbrace  g \in G \mid \varphi(g) \in K' \rbrace$ is a subgroup of $G$.
 - **Proof**:
@@ -191,7 +194,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
 
 ---
 
-##### 6. Center Preservation
+#### 6. Center Preservation
 
 - **Statement**: $\varphi(Z(G)) = Z(G')$, where $Z(G)$ and $Z(G')$ denote the centers of $G$ and $G'$, respectively.
 - **Proof**:
@@ -203,9 +206,7 @@ Suppose $\varphi: G \rightarrow G'$ is an isomorphism between two groups $G$ and
     - Thus, $\varphi(z)$ commutes with every element in $G'$, meaning $\varphi(z) \in Z(G')$.
   - Conversely, if $z' \in Z(G')$, then $\varphi^{-1}(z') \in Z(G)$, completing the proof that $\varphi(Z(G)) = Z(G')$.
 
-### Theorem 6.3: Aut(G) and Inn(G) are Groups
-
-#### Statement
+## Theorem 6.3: Aut(G) and Inn(G) are Groups
 
 The set of all automorphisms of a group $G$, denoted $\text{Aut}(G)$, and the set of all inner automorphisms of $G$, denoted $\text{Inn}(G)$, are both groups under the operation of function composition.
 
@@ -215,35 +216,28 @@ The set of all automorphisms of a group $G$, denoted $\text{Aut}(G)$, and the se
 
 To show that $\text{Aut}(G)$ forms a group under composition, we need to verify that it satisfies the group properties: closure, existence of identity, existence of inverses, and associativity.
 
-#### 1. Closure
-
-- Let $\varphi, \psi \in \text{Aut}(G)$, which means both $\varphi$ and $\psi$ are bijective and operation-preserving.
-- We need to show that $\varphi \circ \psi \in \text{Aut}(G)$, meaning $\varphi \circ \psi$ is also bijective and operation-preserving.
-- **Bijectivity**: Since both $\varphi$ and $\psi$ are bijections, their composition $\varphi \circ \psi$ is also a bijection.
-- **Operation Preservation**: For any $a, b \in G$,
-  $$
-  (\varphi \circ \psi)(ab) = \varphi(\psi(ab)) = \varphi(\psi(a) \cdot \psi(b)) = \varphi(\psi(a)) \cdot \varphi(\psi(b)) = (\varphi \circ \psi)(a) \cdot (\varphi \circ \psi)(b).
-  $$
-- Thus, $\varphi \circ \psi \in \text{Aut}(G)$, proving closure.
-
-#### 2. Identity
-
-- The identity function $\text{id}_G: G \rightarrow G$, defined by $\text{id}_G(g) = g$ for all $g \in G$, is an automorphism of $G$ since it trivially preserves the group operation.
-- Therefore, $\text{id}_G \in \text{Aut}(G)$, satisfying the identity property.
-
-#### 3. Inverses
-
-- For each $\varphi \in \text{Aut}(G)$, there exists an inverse function $\varphi^{-1}$ (since $\varphi$ is bijective) such that $\varphi \circ \varphi^{-1} = \text{id}_G$ and $\varphi^{-1} \circ \varphi = \text{id}_G$.
-- **Operation Preservation** for $\varphi^{-1}$: Since $\varphi$ is operation-preserving, for any $a, b \in G$,
-  $$
-  \varphi^{-1}(ab) = \varphi^{-1}(\varphi(\varphi^{-1}(a)) \cdot \varphi(\varphi^{-1}(b))) = \varphi^{-1}(\varphi(a)) \cdot \varphi^{-1}(\varphi(b)) = \varphi^{-1}(a) \cdot \varphi^{-1}(b),
-  $$
-  meaning $\varphi^{-1} \in \text{Aut}(G)$.
-- Thus, every element in $\text{Aut}(G)$ has an inverse within $\text{Aut}(G)$, confirming the existence of inverses.
-
-#### 4. Associativity
-
-- Since function composition is associative, $\text{Aut}(G)$ inherits associativity under composition.
+- **1. Closure**
+  - Let $\varphi, \psi \in \text{Aut}(G)$, which means both $\varphi$ and $\psi$ are bijective and operation-preserving.
+  - We need to show that $\varphi \circ \psi \in \text{Aut}(G)$, meaning $\varphi \circ \psi$ is also bijective and operation-preserving.
+  - **Bijectivity**: Since both $\varphi$ and $\psi$ are bijections, their composition $\varphi \circ \psi$ is also a bijection.
+  - **Operation Preservation**: For any $a, b \in G$,
+    $$
+    (\varphi \circ \psi)(ab) = \varphi(\psi(ab)) = \varphi(\psi(a) \cdot \psi(b)) = \varphi(\psi(a)) \cdot \varphi(\psi(b)) = (\varphi \circ \psi)(a) \cdot (\varphi \circ \psi)(b).
+    $$
+  - Thus, $\varphi \circ \psi \in \text{Aut}(G)$, proving closure.
+- **2. Identity**
+  - The identity function $\text{id}_G: G \rightarrow G$, defined by $\text{id}_G(g) = g$ for all $g \in G$, is an automorphism of $G$ since it trivially preserves the group operation.
+  - Therefore, $\text{id}_G \in \text{Aut}(G)$, satisfying the identity property.
+- **3. Inverses**
+  - For each $\varphi \in \text{Aut}(G)$, there exists an inverse function $\varphi^{-1}$ (since $\varphi$ is bijective) such that $\varphi \circ \varphi^{-1} = \text{id}_G$ and $\varphi^{-1} \circ \varphi = \text{id}_G$.
+  - **Operation Preservation** for $\varphi^{-1}$: Since $\varphi$ is operation-preserving, for any $a, b \in G$,
+    $$
+    \varphi^{-1}(ab) = \varphi^{-1}(\varphi(\varphi^{-1}(a)) \cdot \varphi(\varphi^{-1}(b))) = \varphi^{-1}(\varphi(a)) \cdot \varphi^{-1}(\varphi(b)) = \varphi^{-1}(a) \cdot \varphi^{-1}(b),
+    $$
+    meaning $\varphi^{-1} \in \text{Aut}(G)$.
+  - Thus, every element in $\text{Aut}(G)$ has an inverse within $\text{Aut}(G)$, confirming the existence of inverses.
+- **4. Associativity**
+  - Since function composition is associative, $\text{Aut}(G)$ inherits associativity under composition.
 
 Since $\text{Aut}(G)$ satisfies closure, identity, inverses, and associativity, it forms a group under function composition.
 
@@ -257,31 +251,24 @@ To show that $\text{Inn}(G)$ forms a group, we'll use similar steps to those use
    - Each inner automorphism of $G$ is defined by $\varphi_a(x) = axa^{-1}$ for a fixed $a \in G$ and all $x \in G$.
    - The set $\text{Inn}(G) = \lbrace  \varphi_a \mid a \in G \rbrace$ includes all such inner automorphisms.
 
-#### 1. Closure
-
-- For any $\varphi_a, \varphi_b \in \text{Inn}(G)$, their composition $\varphi_a \circ \varphi_b$ is given by:
-  $$
-  (\varphi_a \circ \varphi_b)(x) = \varphi_a(\varphi_b(x)) = \varphi_a(bxb^{-1}) = abx(b^{-1}a^{-1}) = (ab)x(ab)^{-1}.
-  $$
-- Since $\varphi_a \circ \varphi_b = \varphi_{ab}$ and $ab \in G$, it follows that $\varphi_a \circ \varphi_b \in \text{Inn}(G)$.
-- Therefore, $\text{Inn}(G)$ is closed under composition.
-
-#### 2. Identity
-
-- The identity automorphism $\text{id}_G(x) = x$ for all $x \in G$ is achieved by $\varphi_e(x) = exe^{-1} = x$, where $e$ is the identity element of $G$.
-- Thus, $\text{id}_G \in \text{Inn}(G)$, satisfying the identity property.
-
-#### 3. Inverses
-
-- For $\varphi_a \in \text{Inn}(G)$, the inverse function is $\varphi_{a^{-1}}$, since:
-  $$
-  \varphi_a \circ \varphi_{a^{-1}}(x) = \varphi_a(a^{-1} x a) = aa^{-1} x a^{-1} a = x.
-  $$
-- Therefore, $\varphi_a^{-1} = \varphi_{a^{-1}} \in \text{Inn}(G)$, confirming that each element in $\text{Inn}(G)$ has an inverse in $\text{Inn}(G)$.
-
-#### 4. Associativity
-
-- Since $\text{Inn}(G)$ is a subset of $\text{Aut}(G)$, it inherits associativity from function composition.
+- **1. Closure**
+  - For any $\varphi_a, \varphi_b \in \text{Inn}(G)$, their composition $\varphi_a \circ \varphi_b$ is given by:
+    $$
+    (\varphi_a \circ \varphi_b)(x) = \varphi_a(\varphi_b(x)) = \varphi_a(bxb^{-1}) = abx(b^{-1}a^{-1}) = (ab)x(ab)^{-1}.
+    $$
+  - Since $\varphi_a \circ \varphi_b = \varphi_{ab}$ and $ab \in G$, it follows that $\varphi_a \circ \varphi_b \in \text{Inn}(G)$.
+  - Therefore, $\text{Inn}(G)$ is closed under composition.
+- **2. Identity**
+  - The identity automorphism $\text{id}_G(x) = x$ for all $x \in G$ is achieved by $\varphi_e(x) = exe^{-1} = x$, where $e$ is the identity element of $G$.
+  - Thus, $\text{id}_G \in \text{Inn}(G)$, satisfying the identity property.
+- **3. Inverses**
+  - For $\varphi_a \in \text{Inn}(G)$, the inverse function is $\varphi_{a^{-1}}$, since:
+    $$
+    \varphi_a \circ \varphi_{a^{-1}}(x) = \varphi_a(a^{-1} x a) = aa^{-1} x a^{-1} a = x.
+    $$
+  - Therefore, $\varphi_a^{-1} = \varphi_{a^{-1}} \in \text{Inn}(G)$, confirming that each element in $\text{Inn}(G)$ has an inverse in $\text{Inn}(G)$.
+- **4. Associativity**
+  - Since $\text{Inn}(G)$ is a subset of $\text{Aut}(G)$, it inherits associativity from function composition.
 
 Since $\text{Inn}(G)$ satisfies closure, identity, inverses, and associativity, it forms a group under function composition.
 
@@ -289,14 +276,13 @@ Let's proceed with a detailed, step-by-step proof of **Theorem 6.4: Aut($\mathbb
 
 ---
 
-### Theorem 6.4: Aut($\mathbb{Z}_n$) ≈ $U(n)$
+## Theorem 6.4: Aut($\mathbb{Z}_n$) ≈ $U(n)$
 
-#### Statement
 For every positive integer $n$, the automorphism group of the cyclic group $\mathbb{Z}_n$, denoted $\text{Aut}(\mathbb{Z}_n)$, is isomorphic to the group of units $U(n)$ under multiplication modulo $n$. Here, $U(n)$ consists of all integers less than $n$ that are coprime to $n$.
 
 ---
 
-### Proof
+### Proof of Theorem 6.4
 
 #### Step 1: Define and Characterize $\text{Aut}(\mathbb{Z}_n)$
 
@@ -352,9 +338,8 @@ To establish an isomorphism, we'll construct a bijective homomorphism $T$ from $
 
 Since $T$ is a bijective homomorphism, it is an isomorphism. Therefore, $\text{Aut}(\mathbb{Z}_n) \approx U(n)$.
 
-### Theorem 6.5: Cayley's Theorem
+## Theorem 6.5: Cayley's Theorem
 
-#### Statement
 Every group $G$ is isomorphic to a subgroup of the symmetric group on $G$. In other words, every group is isomorphic to a group of permutations.
 
 ---
@@ -365,7 +350,7 @@ To prove Cayley's Theorem, we'll construct an injective homomorphism from $G$ in
 
 #### Step 1: Define Left Multiplication Maps
 
-For each element $g \in G$, define a function $T_g: G \rightarrow G$ by:
+Fo#r each element $g \in G$, define a function $T_g: G \rightarrow G$ by:
 $$
 T_g(x) = gx \quad \text{for all } x \in G.
 $$
@@ -432,7 +417,7 @@ Define $\Phi: G \rightarrow S_G$ by setting $\Phi(g) = T_g$ for each $g \in G$. 
 
 Since $\Phi$ is an injective homomorphism from $G$ into $S_G$, the image $\Phi(G) = \lbrace  T_g \mid g \in G \rbrace$ is isomorphic to $G$ and is a subgroup of $S_G$.
 
-### Example 1: Cayley's Theorem Applied to $\mathbb{Z}_3$
+## Example 1: Cayley's Theorem Applied to $\mathbb{Z}_3$
 
 Consider the group $\mathbb{Z}_3 = \lbrace 0, 1, 2\rbrace$ under addition modulo 3.
 
@@ -465,7 +450,7 @@ Consider the group $\mathbb{Z}_3 = \lbrace 0, 1, 2\rbrace$ under addition modulo
 
 ---
 
-### Example 2: Cayley's Theorem Applied to $D_3$, the Symmetry Group of a Triangle
+## Example 2: Cayley's Theorem Applied to $D_3$, the Symmetry Group of a Triangle
 
 Consider $D_3$, the dihedral group representing the symmetries of an equilateral triangle, with elements $e, r, r^2, s, rs, r^2s$.
 

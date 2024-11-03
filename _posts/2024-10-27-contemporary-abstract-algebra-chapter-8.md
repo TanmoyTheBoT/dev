@@ -193,7 +193,7 @@ Let $G$ and $H$ be finite cyclic groups. The direct product $G \oplus H$ is cycl
 
    Suppose, for contradiction, that $\gcd(m, n) = d > 1$. Let $g$ be a generator of $G$ with $g^m = e_G$, where $e_G$ is the identity element in $G$. Similarly, let $h$ be a generator of $H$ with $h^n = e_H$.
 
-   Since $\gcd(m, n) = d > 1$, any element $(g, h)$ would have an order that divides $\frac{m \cdot n}{d}$, which is less than $m \cdot n$. This would contradict our assumption that $G \oplus H$ is cyclic and has an element of order $m \cdot n$.
+   Since $\gcd(m, n) = d > 1$, any element $(g, h)$ would have an order that divides $\displaystyle\frac{m \cdot n}{d}$, which is less than $m \cdot n$. This would contradict our assumption that $G \oplus H$ is cyclic and has an element of order $m \cdot n$.
 
    Therefore, $\gcd(m, n) = 1$.
 

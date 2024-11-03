@@ -193,7 +193,7 @@ Lagrange's Theorem provides a framework for several important corollaries in gro
 
 **Statement**: The number of distinct left (or right) cosets of a subgroup $H$ in a finite group $G$ is called the **index** of $H$ in $G$, denoted by $|G : H|$. The index is given by:
 $$
-|G : H| = \frac{|G|}{|H|}
+|G : H| = \displaystyle\frac{|G|}{|H|}
 $$
 
 **Proof**:
@@ -203,9 +203,9 @@ $$
 $$
 Rearranging, we find:
 $$
-r = \frac{|G|}{|H|}
+r = \displaystyle\frac{|G|}{|H|}
 $$
-Thus, the number of distinct left cosets of $H$ in $G$, which is the index of $H$ in $G$, is given by $|G : H| = \frac{|G|}{|H|}$.
+Thus, the number of distinct left cosets of $H$ in $G$, which is the index of $H$ in $G$, is given by $|G : H| = \displaystyle\frac{|G|}{|H|}$.
 
 ---
 
@@ -263,7 +263,7 @@ This completes the proof of Fermat's Little Theorem.
 
 **Statement**: Let $H$ and $K$ be finite subgroups of a group $G$. Define the set $HK = \lbrace hk \mid h \in H, k \in K\rbrace$, which contains all products of elements in $H$ and $K$. Then:
 $$
-|HK| = \frac{|H||K|}{|H \cap K|}
+|HK| = \displaystyle\frac{|H||K|}{|H \cap K|}
 $$
 
 This theorem provides the order of the set $HK$ by accounting for any overlap between the subgroups $H$ and $K$ through the intersection $H \cap K$.
@@ -283,12 +283,12 @@ This theorem provides the order of the set $HK$ by accounting for any overlap be
 3. **Calculating the Size of $HK$**:
    - Since each element of $HK$ corresponds to $|H \cap K|$ pairs in $H \times K$, the total number of distinct elements in $HK$ is given by dividing $|H| \cdot |K|$ by $|H \cap K|$:
      $$
-     |HK| = \frac{|H||K|}{|H \cap K|}
+     |HK| = \displaystyle\frac{|H||K|}{|H \cap K|}
      $$
 
 Thus, we have shown that:
 $$
-|HK| = \frac{|H||K|}{|H \cap K|}
+|HK| = \displaystyle\frac{|H||K|}{|H \cap K|}
 $$
 
 ---
@@ -297,7 +297,7 @@ $$
 
 Theorem 7.2 provides insight into the structure of the product set $HK$. Notably:
 - $HK$ is not necessarily a subgroup of $G$; it is only guaranteed to be a set containing all possible products of elements from $H$ and $K$.
-- The formula $|HK| = \frac{|H||K|}{|H \cap K|}$ highlights that $|HK|$ is influenced by the overlap (intersection) of $H$ and $K$. The larger the intersection $H \cap K$, the smaller $|HK|$ will be relative to $|H| \cdot |K|$.
+- The formula $|HK| = \displaystyle\frac{|H||K|}{|H \cap K|}$ highlights that $|HK|$ is influenced by the overlap (intersection) of $H$ and $K$. The larger the intersection $H \cap K$, the smaller $|HK|$ will be relative to $|H| \cdot |K|$.
 
 ### Examples of Theorem 7.2's Applications
 
@@ -305,12 +305,12 @@ These examples illustrate how Theorem 7.2 helps determine subgroup constraints i
 
 #### Example 6: Subgroup Order Constraints in Groups of Order 75
 A group of order 75 can have at most one subgroup of order 25.
-- **Reasoning**: If $H$ and $K$ were two distinct subgroups of order 25, their product $HK$ would have order $\frac{|H||K|}{|H \cap K|}$, which could potentially exceed 75 if $|H \cap K|$ is too small.
+- **Reasoning**: If $H$ and $K$ were two distinct subgroups of order 25, their product $HK$ would have order $\displaystyle\frac{|H||K|}{|H \cap K|}$, which could potentially exceed 75 if $|H \cap K|$ is too small.
 - **Conclusion**: $H \cap K$ must equal $H$ or $K$, implying $H = K$, so only one subgroup of order 25 can exist.
 
 #### Example 7: Subgroup Constraints in Abelian Groups of Order 42
 An abelian group of order 42 can have at most one subgroup of order 6.
-- **Reasoning**: Suppose $H$ and $K$ are subgroups of order 6. By Theorem 7.2, $|HK|$ would equal $\frac{|H||K|}{|H \cap K|}$, which cannot divide 42 unless $|HK|$ is 42.
+- **Reasoning**: Suppose $H$ and $K$ are subgroups of order 6. By Theorem 7.2, $|HK|$ would equal $\displaystyle\frac{|H||K|}{|H \cap K|}$, which cannot divide 42 unless $|HK|$ is 42.
 - **Conclusion**: This reasoning restricts $H$ and $K$ to be the same subgroup, allowing at most one subgroup of order 6.
 
 ### Section: Permutation Groups and Cosets

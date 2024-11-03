@@ -104,8 +104,6 @@ published: true
      - Since $H$ is finite and closed under $G$'s operation, for any $a\in H$, the sequence $a,a^2,a^3,\ldots$ must eventually repeat, so there exist integers $m$ and $n$ with $m>n$ such that $a^m=a^n$, implying $a^{m-n}=e$ and thus $e\in H$.
      - For any $a\in H$, we have $a^{m-n}=e$, which implies $a$ has finite order; letting $k$ be the smallest integer such that $a^k=e$, we find that $a^{k-1}$ is the inverse of $a$ and is in $H$, since $H$ is closed.
 
-Let's move on to **Examples Applying Subgroup Tests** to illustrate these theorems in action.
-
 ---
 
 ### Examples Applying Subgroup Tests
@@ -200,8 +198,6 @@ Let's move on to **Examples Applying Subgroup Tests** to illustrate these theore
      - If $x \in C(a)$, then $xa=ax$ (by definition of the centralizer $C(a)$), so $x^{-1}(xa)x^{-1}=x^{-1}(ax)x^{-1} \Leftrightarrow ax^{-1}=x^{-1}a$, thus $x^{-1} \in C(a)$.
      - By the Two-Step Subgroup Test (Theorem 3.2), $C(a)$ is a subgroup of $G$.
    - **Conclusion**: $C(a)$ is a subgroup of $G$, known as the **centralizer of $a$**, and includes all elements of $G$ that commute with $a$.
-
-Let's explore **Examples of Subgroup Applications** to see how these advanced theorems and subgroup properties are applied in practice.
 
 ---
 

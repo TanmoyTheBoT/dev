@@ -54,8 +54,8 @@ Starting with **Definitions and Basic Notations** and the **Examples of Permutat
 
 3. **Example 3: Symmetries of a Square (Dihedral Group $D_4$)**
    - Labeling the corners of a square as $1, 2, 3,$ and $4$, we can define symmetries by rotations or reflections:
-     - **90° Counterclockwise Rotation**: $$\rho = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 4 & 1 \end{bmatrix}$$
-     - **Reflection across Horizontal Axis**: $$\phi = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 1 & 3 & 2 & 4 \end{bmatrix}$$
+     - **90° Counterclockwise Rotation**: $$\rho = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 4 & 1 \end{bmatrix}$$$
+     - **Reflection across Horizontal Axis**: $$\phi = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 1 & 3 & 2 & 4 \end{bmatrix}$$$
    - These symmetries form a subgroup of $S_4$, illustrating how geometric transformations correspond to elements in a permutation group.
 
 ## Cycle Notation
@@ -215,7 +215,7 @@ This proof uses **induction** on $r$, the number of 2-cycles. The goal is to sho
 ##### **Step 1: Base Cases**
 
 1. **Case $r = 1$:**  
-   - If $r = 1$, then we have only one 2-cycle $\beta_1$. 
+   - If $r = 1$, then we have only one 2-cycle $\beta_1$.
    - A single 2-cycle (such as $(a\ b)$) is **not** the identity permutation because it swaps two elements.
    - Thus, $r = 1$ cannot represent the identity, so $r = 1$ is impossible for $\epsilon$.
 
@@ -358,7 +358,7 @@ Since all group properties are satisfied, the set of even permutations $A_n$ for
 3. **Order Calculation**:
    - Since $S_n$ has $n!$ elements and there is an equal number of even and odd permutations, it follows that:
      $$
-     |A_n| = |O_n| = \frac{n!}{2}
+     |A_n| = |O_n| = \displaystyle\frac{n!}{2}
      $$
 
 Thus, the order of $A_n$ is $n! / 2$, completing the proof.
@@ -440,7 +440,7 @@ Using **Theorem 5.4**:
 A permutation can be used for encryption by rearranging elements in blocks.
 
 1. **Encryption with a 4-Letter Block**:
-   - Suppose we use the permutation $$\alpha = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 3 & 4 & 2 & 1 \end{bmatrix}$$.
+   - Suppose we use the permutation $$\alpha = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 3 & 4 & 2 & 1 \end{bmatrix}$$$.
    - To encrypt the message "MEET AT DAWN", break it into 4-letter blocks:
      $$
      \text{MEET ATDA WNXX}
@@ -452,4 +452,4 @@ A permutation can be used for encryption by rearranging elements in blocks.
      - "WNXX" becomes "XXWN"
 
 2. **Decryption**:
-   - To decrypt, use the inverse permutation $$\alpha^{-1} = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 1 & 2 \end{bmatrix}$$ to restore the original order.
+   - To decrypt, use the inverse permutation $$\alpha^{-1} = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 1 & 2 \end{bmatrix}$$$ to restore the original order.

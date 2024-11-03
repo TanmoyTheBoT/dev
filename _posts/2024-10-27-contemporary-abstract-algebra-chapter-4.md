@@ -22,7 +22,7 @@ published: true
 1. **Cyclic Group**:
 
    $$
-   G \text{ is a cyclic group if there exists } a \in G \text{ such that } G = \langle a \rangle = \{ a^n \mid n \in \mathbb{Z} \}.
+   G \text{ is a cyclic group if there exists } a \in G \text{ such that } G = \langle a \rangle = \lbrace  a^n \mid n \in \mathbb{Z} \rbrace.
    $$
 
 2. **Generator**:
@@ -34,7 +34,7 @@ published: true
 3. **Order of an Element**:
 
    $$
-   \vert a \vert = \min \{ n \in \mathbb{Z}^+ \mid a^n = e \}.
+   \vert a \vert = \min \lbrace  n \in \mathbb{Z}^+ \mid a^n = e \rbrace.
    $$
 
    If no such $n$ exists, then $\vert a \vert = \infty$.
@@ -56,7 +56,7 @@ published: true
 6. **Euler's Phi Function** $ \varphi(n) $:
 
    $$
-   \varphi(n) = \#\{ k \in \mathbb{Z}^+ \mid 1 \leq k \leq n \text{ and } \gcd(n, k) = 1 \}.
+   \varphi(n) = \#\lbrace  k \in \mathbb{Z}^+ \mid 1 \leq k \leq n \text{ and } \gcd(n, k) = 1 \rbrace.
    $$
 
 ---
@@ -169,7 +169,7 @@ Let $\vert a \vert = m$ and $\vert b \vert = n$, so $a^m = e$ and $b^n = e$.
 Let $a$ be an element of order $n$ in a group, and let $k$ be a positive integer. Then:
 
 1. $\langle a^k \rangle = \langle a^{\gcd(n,k)} \rangle$.
-2. $\vert a^k\vert = \frac{n}{\gcd(n,k)}$.
+2. $\vert a^k\vert = \displaystyle\frac{n}{\gcd(n,k)}$.
 
 ##### Proof of Theorem 4.2
 
@@ -217,7 +217,7 @@ proving Part 1.
 
 ---
 
-###### Proof of Part 2: $|a^k| = \frac{n}{\gcd(n,k)}$
+###### Proof of Part 2: $|a^k| = \displaystyle\frac{n}{\gcd(n,k)}$
 
 **Step 1**: Set up the relationship for the order of $a^k$.
 
@@ -243,17 +243,17 @@ proving Part 1.
 
 4. Solving for $m$ gives:
    $$
-   m = \frac{nq}{d}
+   m = \displaystyle\frac{nq}{d}
    $$
 
 5. To make $m$ the smallest positive integer, set $q = 1$:
    $$
-   m = \frac{n}{d}
+   m = \displaystyle\frac{n}{d}
    $$
 
 Thus, the order of $a^d$, and therefore $\vert a^k\vert$, is:  
 $$
-\vert a^k\vert = \vert a^d\vert = \frac{n}{d} = \frac{n}{\gcd(n,k)}
+\vert a^k\vert = \vert a^d\vert = \displaystyle\frac{n}{d} = \displaystyle\frac{n}{\gcd(n,k)}
 $$
 
 This completes the proof of Theorem 4.2.
@@ -271,8 +271,8 @@ In a finite cyclic group, the order of any element divides the order of the grou
 
 **Proof**:
 
-Let $G = \langle a \rangle$ be a cyclic group of order $n$. For any element $a^k \in G$, Theorem 4.2 tells us that the order of $a^k$, denoted $\vert a^k \vert$, is $\frac{n}{\gcd(n, k)}$.  
-Since $\gcd(n, k)$ divides $n$, the quantity $\frac{n}{\gcd(n, k)}$ must also divide $n$. Therefore, the order of $a^k$ divides the order of $G$, proving Corollary 1.
+Let $G = \langle a \rangle$ be a cyclic group of order $n$. For any element $a^k \in G$, Theorem 4.2 tells us that the order of $a^k$, denoted $\vert a^k \vert$, is $\displaystyle\frac{n}{\gcd(n, k)}$.  
+Since $\gcd(n, k)$ divides $n$, the quantity $\displaystyle\frac{n}{\gcd(n, k)}$ must also divide $n$. Therefore, the order of $a^k$ divides the order of $G$, proving Corollary 1.
 
 ---
 
@@ -289,7 +289,7 @@ Let $\vert a \vert = n$. Then:
 1. For the first part, by Theorem 4.2, we have $\langle a^i \rangle = \langle a^{\gcd(n, i)} \rangle$ and $\langle a^j \rangle = \langle a^{\gcd(n, j)} \rangle$.
    - Therefore, $\langle a^i \rangle = \langle a^j \rangle$ if and only if $\gcd(n, i) = \gcd(n, j)$.
 
-2. For the second part, Theorem 4.2 tells us that $\vert a^i \vert = \frac{n}{\gcd(n, i)}$ and $\vert a^j \vert = \frac{n}{\gcd(n, j)}$.
+2. For the second part, Theorem 4.2 tells us that $\vert a^i \vert = \displaystyle\frac{n}{\gcd(n, i)}$ and $\vert a^j \vert = \displaystyle\frac{n}{\gcd(n, j)}$.
    - Therefore, $\vert a^i \vert = \vert a^j \vert$ if and only if $\gcd(n, i) = \gcd(n, j)$, proving Corollary 2.
 
 ---
@@ -303,7 +303,7 @@ Let $\vert a \vert = n$. Then $\langle a \rangle = \langle a^j \rangle$ if and o
 
 The subgroup $\langle a^j \rangle$ equals $\langle a \rangle$ if and only if $a^j$ generates the entire group $G$, which has order $n$.
 
-- By Theorem 4.2, the order of $a^j$ is $\frac{n}{\gcd(n, j)}$.
+- By Theorem 4.2, the order of $a^j$ is $\displaystyle\frac{n}{\gcd(n, j)}$.
 - Therefore, $a^j$ will generate the entire group $G$ (i.e., $\langle a^j \rangle = \langle a \rangle$) if and only if $\vert a^j \vert = n$, which happens if and only if $\gcd(n, j) = 1$.
 This completes the proof of Corollary 3.
 
@@ -320,7 +320,7 @@ The group $\mathbb{Z}_n$ under addition modulo $n$ is cyclic with $1$ as a gener
 
 - Specifically, if $\gcd(n, k) = 1$, then $k$ is relatively prime to $n$ and thus generates $\mathbb{Z}_n$.
 - Conversely, if $k$ is a generator of $\mathbb{Z}_n$, then $\langle k \rangle = \mathbb{Z}_n$, which implies $\vert k \vert = n$.
-  - By Theorem 4.2, $\vert k \vert = \frac{n}{\gcd(n, k)}$. Therefore, for $\vert k \vert = n$, it must be that $\gcd(n, k) = 1$.
+  - By Theorem 4.2, $\vert k \vert = \displaystyle\frac{n}{\gcd(n, k)}$. Therefore, for $\vert k \vert = n$, it must be that $\gcd(n, k) = 1$.
 
 This completes the proof of Corollary 4.
 
@@ -350,13 +350,13 @@ Let $G = \langle a \rangle$ be a cyclic group generated by $a$ with order $n$. L
    - Therefore, $H \subseteq G$ contains only powers of $a$.
 
 2. **Existence of the Smallest Positive Power**:
-   - If $H = \{e\}$, then $H$ is cyclic, generated by $e = a^0$.
+   - If $H = \lbrace e\rbrace$, then $H$ is cyclic, generated by $e = a^0$.
    - Otherwise, there exists at least one positive integer $m$ such that $a^m \in H$ and $a^m \neq e$.
    - Let $t$ be the smallest positive integer such that $a^t \in H$.
 
 3. **Subgroup Generated by $a^t$**:
    - Consider the cyclic subgroup $\langle a^t \rangle$ generated by $a^t$.
-   - This subgroup consists of the elements $\{e, a^t, a^{2t}, \dots\}$, which are all in $H$ because $H$ is closed under the group operation.
+   - This subgroup consists of the elements $\lbrace e, a^t, a^{2t}, \dots\rbrace$, which are all in $H$ because $H$ is closed under the group operation.
 
 4. **Equality of $H$ and $\langle a^t \rangle$**:
    - Now, take any $h \in H$. Since $h \in G = \langle a \rangle$, we can write $h = a^m$ for some integer $m$.
@@ -378,7 +378,7 @@ Let $G = \langle a \rangle$ be a cyclic group generated by $a$ with order $n$. L
 ###### Part 2: Order of Subgroups Divides $n$
 
 1. Since $H = \langle a^t \rangle$ and $a^t$ has the smallest positive power in $H$, the order of $H$ is the order of $a^t$.
-2. The order of $a^t$ is given by $\frac{n}{\gcd(n,t)}$, which divides $n$ because $\gcd(n,t)$ is a divisor of $n$.
+2. The order of $a^t$ is given by $\displaystyle\frac{n}{\gcd(n,t)}$, which divides $n$ because $\gcd(n,t)$ is a divisor of $n$.
 
 ---
 
@@ -388,13 +388,13 @@ Let $G = \langle a \rangle$ be a cyclic group of order $n$.
 
 1. **Subgroup Generated by $a^{n/k}$**:
    - For each positive divisor $k$ of $n$, consider the element $a^{n/k}$.
-   - The order of $a^{n/k}$ is $\frac{n}{\gcd(n,n/k)} = k$.
+   - The order of $a^{n/k}$ is $\displaystyle\frac{n}{\gcd(n,n/k)} = k$.
    - Therefore, the subgroup $\langle a^{n/k} \rangle$ has order $k$.
 
 2. **Uniqueness of Subgroup of Order $k$**:
    - Suppose there exists another subgroup $H \subseteq G$ with order $k$.
    - By Part 1, $H$ must also be cyclic. Let $H = \langle a^m \rangle$ for some integer $m$.
-   - Since $\vert H\vert = k$, we have $\vert a^m \vert = k$, notice that $\vert a \vert = n$ is the smallest integer such that $a^n = e$, if $\vert a^m \vert = k$, then $a^{mk} = e$ with $mk$ must be $n$, implying $m = \frac{n}{k}$.
+   - Since $\vert H\vert = k$, we have $\vert a^m \vert = k$, notice that $\vert a \vert = n$ is the smallest integer such that $a^n = e$, if $\vert a^m \vert = k$, then $a^{mk} = e$ with $mk$ must be $n$, implying $m = \displaystyle\frac{n}{k}$.
    - Therefore, $H = \langle a^{n/k} \rangle$, showing that $\langle a^{n/k} \rangle$ is the unique subgroup of $G$ with order $k$.
 
 ---
@@ -436,10 +436,10 @@ Let $G = \langle a \rangle$ be a cyclic group with $\vert G \vert = n$, where $n
    $$
    \vert a^k \vert = d.
    $$
-3. From Theorem 4.2, we know that $\vert a^k \vert = \frac{n}{\gcd(n, k)}$.
-   - Therefore, $\vert a^k \vert = d$ if and only if $\frac{n}{\gcd(n, k)} = d$, which implies $\gcd(n, k) = \frac{n}{d}$.
+3. From Theorem 4.2, we know that $\vert a^k \vert = \displaystyle\frac{n}{\gcd(n, k)}$.
+   - Therefore, $\vert a^k \vert = d$ if and only if $\displaystyle\frac{n}{\gcd(n, k)} = d$, which implies $\gcd(n, k) = \displaystyle\frac{n}{d}$.
 
-4. The number of integers $k$ less than $n$ that satisfy $\gcd(n, k) = \frac{n}{d} \Leftrightarrow \gcd\left(\frac{n}{\frac{n}{d}}, \frac{k}{\frac{n}{d}}\right) = 1 \Leftrightarrow \gcd(d, k') = 1$ is given by $\varphi(d)$, the **Euler phi function**, because $\varphi(d)$ counts the number of integers up to $d$ that are coprime with $d$.
+4. The number of integers $k$ less than $n$ that satisfy $\gcd(n, k) = \displaystyle\frac{n}{d} \Leftrightarrow \gcd\left(\displaystyle\frac{n}{\displaystyle\frac{n}{d}}, \displaystyle\frac{k}{\displaystyle\frac{n}{d}}\right) = 1 \Leftrightarrow \gcd(d, k') = 1$ is given by $\varphi(d)$, the **Euler phi function**, because $\varphi(d)$ counts the number of integers up to $d$ that are coprime with $d$.
 
 Therefore, the number of elements of order $d$ in $G$ is $\varphi(d)$.
 
@@ -495,11 +495,11 @@ Thus, the total number of elements of order $d$ in $G$ is a multiple of $\varphi
 
 - **Solution**: Using Theorem 4.2:
   - **$\langle a^{26} \rangle$**:
-    - $\gcd(30, 26) = 2$, so $\langle a^{26} \rangle = \langle a^2 \rangle$, and $\vert a^{26} \vert = \frac{30}{2} = 15$.
+    - $\gcd(30, 26) = 2$, so $\langle a^{26} \rangle = \langle a^2 \rangle$, and $\vert a^{26} \vert = \displaystyle\frac{30}{2} = 15$.
   - **$\langle a^{17} \rangle$**:
-    - $\gcd(30, 17) = 1$, so $\langle a^{17} \rangle = \langle a \rangle$, and $\vert a^{17} \vert = \frac{30}{1} = 30$.
+    - $\gcd(30, 17) = 1$, so $\langle a^{17} \rangle = \langle a \rangle$, and $\vert a^{17} \vert = \displaystyle\frac{30}{1} = 30$.
   - **$\langle a^{18} \rangle$**:
-    - $\gcd(30, 18) = 6$, so $\langle a^{18} \rangle = \langle a^6 \rangle$, and $\vert a^{18} \vert = \frac{30}{6} = 5$.
+    - $\gcd(30, 18) = 6$, so $\langle a^{18} \rangle = \langle a^6 \rangle$, and $\vert a^{18} \vert = \displaystyle\frac{30}{6} = 5$.
 
 - **Conclusion**: The example illustrates how Theorem 4.2 allows us to determine the structure and order of subgroups generated by powers of $a$.
 
@@ -511,7 +511,7 @@ Thus, the total number of elements of order $d$ in $G$ is a multiple of $\varphi
 
 - **Solution**:
   - $\mathbb{Z}_{30}$ is generated by 1, with order 30. The divisors of 30 are $1, 2, 3, 5, 6, 10, 15,$ and $30$.
-  - By Theorem 4.3, for each divisor $k$ of 30, there is a unique subgroup of order $k$ in $\mathbb{Z}_{30}$, generated by $\frac{30}{k}$.
+  - By Theorem 4.3, for each divisor $k$ of 30, there is a unique subgroup of order $k$ in $\mathbb{Z}_{30}$, generated by $\displaystyle\frac{30}{k}$.
   - The subgroups of $\mathbb{Z}_{30}$ are:
     - $\langle 1 \rangle = \mathbb{Z}_{30}$ (order 30),
     - $\langle 2 \rangle$ (order 15),
